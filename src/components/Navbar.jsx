@@ -17,29 +17,30 @@ function Navbar() {
         <div className="navbar flex justify-between bg-error text-base-100 shadow-md fixed max-w-[80%] border-2 rounded-2xl border-primary px-4 py-2">
           <div className="flex-1 flex justify-start items-center gap-2">
             <img src={kinglyInspired} alt="" className="btn-ghost rounded-full w-16 h-16" />
-            <a className="btn btn-ghost normal-case text-xl text-primary">Seb Schoeneberger</a>
+            <a className="btn btn-ghost normal-case text-xl text-primary text-left font-bold">Sebastian Schoeneberger</a>
           </div>
 
           <div className="flex-1 flex justify-center items-center font-bold text-2xl">
             {/* Navigation Links */}
             <ul className="menu menu-horizontal px-1">
               <li>
-                <a className="text-base">About me</a>
+                <a className="text-base hover:text-white">About me</a>
               </li>
               <li>
-                <a className="text-base">Projects</a>
+                <a className="text-base hover:text-white">Projects</a>
               </li>
               <li>
-                <a className="text-base">Skills</a>
+                <a className="text-base hover:text-white">Skills</a>
               </li>
               <li>
-                <a className="text-base">Contact</a>
+                <a className="text-base hover:text-white">Contact</a>
               </li>
             </ul>
           </div>
 
           <div className="flex-1 flex justify-end gap-4 items-center">
-            <div className="flex justify-center items-center gap-2">
+            <button className="btn btn-primary rounded-full hover:text-white text-base">Contact</button>
+            {/* <div className="flex justify-center items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -94,7 +95,7 @@ function Navbar() {
                     clip-rule="evenodd"
                     />
                     </svg>
-            </div>
+            </div> */}
             {/* Theme Toggle */}
             <label className="swap swap-rotate ml-4">
               {/* Hidden checkbox controlling the state */}
