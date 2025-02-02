@@ -1,6 +1,7 @@
 import img from "../assets/2019-05-08 18.33.23.jpg";
 import Lottie from 'lottie-react';
 import animationData from '../assets/Animation - 1738256751522.json';
+import AboutMe from "./AboutMe";
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
             </a>
             <h3 className="text-accent text-[2.7rem]">And I am a <strong>Full-Stack Developer</strong></h3>
             <p className="text-2xl flex flex-col">
-              <span>With a background in mechatronics👨🏽‍🔧 and business management📊, I combine technical expertise, problem-solving, and a multicultural🌍 perspective to create impactful web💻 solutions.</span>
+              <span>With a background in mechatronics👨🏽‍🔧 and business management📊, I combine technical expertise, problem-solving, and a multicultural🌍 perspective to create impactful web solutions.</span>
               <span className="text-secondary font-semibold pt-2"> Let’s build solutions that make an impact!</span>
             </p>
             <button className="btn btn-primary rounded-3xl">Download CV</button>
@@ -104,6 +105,9 @@ function Home() {
           </div>
         </section>
         <Lottie animationData={animationData} style={{ width: 80, height: 80 }} />
+        <AboutMe />
+        <Lottie animationData={animationData} style={{ width: 80, height: 80 }} />
+
       </main>
     </>
   );
