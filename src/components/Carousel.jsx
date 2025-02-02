@@ -9,8 +9,8 @@ import GitHubLogo from '../assets/Skills Logo/GitHub.png';
 import HTML5Logo from '../assets/Skills Logo/html-5.png';
 import JavaScriptLogo from '../assets/Skills Logo/JavaScript.png';
 import PostmanLogo from '../assets/Skills Logo/Postman.png';
-import TailwindLogo from '../assets/Skills Logo/Tailwind Css.png';
-import VisualStudioLogo from '../assets/Skills Logo/Visual Studio Code (VS Code).png';
+import TailwindLogo from '../assets/Skills Logo/TailwindCss.png';
+import VisualStudioLogo from '../assets/Skills Logo/VisualStudio.png';
 import ViteLogo from '../assets/Skills Logo/Vite.js.png';
 
 function Carousel() {
