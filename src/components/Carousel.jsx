@@ -1,17 +1,17 @@
 import React from 'react';
 
 // Import your images from the path
-import CanvaLogo from '../assets/Skills Logo/Canva.png';
-import CSS3Logo from '../assets/Skills Logo/css-3.png';
-import FigmaLogo from '../assets/Skills Logo/Figma.png';
-import GitLogo from '../assets/Skills Logo/Git.png';
-import GitHubLogo from '../assets/Skills Logo/GitHub.png';
-import HTML5Logo from '../assets/Skills Logo/html-5.png';
-import JavaScriptLogo from '../assets/Skills Logo/JavaScript.png';
-import PostmanLogo from '../assets/Skills Logo/Postman.png';
-import TailwindLogo from '../assets/Skills Logo/TailwindCss.png';
-import VisualStudioLogo from '../assets/Skills Logo/VisualStudio.png';
-import ViteLogo from '../assets/Skills Logo/Vite.js.png';
+import CanvaLogo from '../assets/Skills-Logo/Canva.png';
+import CSS3Logo from '../assets/Skills-Logo/css-3.png';
+import FigmaLogo from '../assets/Skills-Logo/Figma.png';
+import GitLogo from '../assets/Skills-Logo/Git.png';
+import GitHubLogo from '../assets/Skills-Logo/GitHub.png';
+import HTML5Logo from '../assets/Skills-Logo/html-5.png';
+import JavaScriptLogo from '../assets/Skills-Logo/JavaScript.png';
+import PostmanLogo from '../assets/Skills-Logo/Postman.png';
+import TailwindLogo from '../assets/Skills-Logo/TailwindCss.png';
+import VisualStudioLogo from '../assets/Skills-Logo/VisualStudio.png';
+import ViteLogo from '../assets/Skills-Logo/Vite.js.png';
 
 function Carousel() {
   // List of images and their corresponding names

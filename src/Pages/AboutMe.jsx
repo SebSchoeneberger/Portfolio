@@ -1,8 +1,8 @@
 import img2 from "../assets/IMG_20190322_114508.jpg";
-import ReactLogo from "../assets/MERN logo/React.png";
-import NodeLogo from "../assets/MERN logo/Node.js.png";
-import ExpressLogo from "../assets/MERN logo/Express.png";
-import MongoDBLogo from "../assets/MERN logo/MongoDB.png";
+import ReactLogo from "../assets/MERN-Logo/React.png";
+import NodeLogo from "../assets/MERN-Logo/Node.js.png";
+import ExpressLogo from "../assets/MERN-Logo/Express.png";
+import MongoDBLogo from "../assets/MERN-Logo/MongoDB.png";
 import Carousel from "../components/Carousel";
 
 function AboutMe() {
