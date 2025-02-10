@@ -2,6 +2,7 @@ import img from "../assets/2019-05-08 18.33.23.jpg";
 import Lottie from 'lottie-react';
 import animationData from '../assets/Animation - 1738256751522.json';
 import AboutMe from "./AboutMe";
+import Projects from "./Projects";
 
 function Home() {
   return (
@@ -106,7 +107,7 @@ function Home() {
         </section>
         <Lottie animationData={animationData} style={{ width: 80, height: 80 }} />
         <AboutMe />
-        <Lottie animationData={animationData} style={{ width: 80, height: 80 }} />
+        <Projects />
 
       </main>
     </>

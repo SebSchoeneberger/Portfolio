@@ -65,7 +65,8 @@ function AboutMe() {
 
             </div>
 
-            <h2 className="p-6 pt-12 text-4xl font-semibold text-left">{`</ Skills>`}</h2>
+            <h2 className="text-6xl font-bold py-6">Skills</h2>
+            <div className="w-16 h-2 rounded-full bg-accent "></div>
             <Carousel />
 
 
