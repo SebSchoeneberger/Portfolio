@@ -3,6 +3,7 @@ import Lottie from 'lottie-react';
 import animationData from '../assets/Animation - 1738256751522.json';
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 function Home() {
   return (
@@ -108,6 +109,7 @@ function Home() {
         <Lottie animationData={animationData} style={{ width: 80, height: 80 }} />
         <AboutMe />
         <Projects />
+        <Contact />
 
       </main>
     </>
