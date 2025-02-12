@@ -11,20 +11,172 @@ function Projects() {
             <h2 className="text-6xl font-bold py-6">Projects</h2>
             <div className="w-16 h-2 rounded-full bg-accent"></div>
 
-            {/* Main Container */}
-            <div className="flex max-w-full p-20 items-start gap-16">
+            <section className='flex flex-col items-center gap-10 p-10 '>
 
-                {/* Left Title Section */}
+                <div className='flex items-center gap-10 border-b border-white w-[1240px] h-[350px]'>
+                    <img src={Snaptask} alt="Snaptask Homepage" className='w-[545px] h-auto bg-cover rounded-lg hover:scale-110' />
+                    <div className='flex flex-col items-start gap-2'>
+                        <h2 className='text-primary font-bold text-xl'>Snaptask</h2>
+                        <h3 className='text-white text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
+                        <p className='text-white text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <ul className='flex gap-2'>
+                            <li className='border-white border-2 rounded-full p-2'>React</li>
+                            <li className='border-white border-2 rounded-full p-2'>NodeJS</li>
+                            <li className='border-white border-2 rounded-full p-2'>Mongo DB</li>
+                        </ul>
+                    </div>
+
+                    <div className='flex flex-col gap-4'>
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                             </svg>
+                        </button>
+
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037.75.75 0 0 1-.646 1.353 5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.353 5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037.75.75 0 0 1-.354-1Z" clipRule="evenodd" />
+                          </svg>
+                       </button>
+                    </div>
+                </div>
+
+                <div className='flex items-center gap-10 border-b border-white w-[1240px] h-[350px]'>
+                    <img src={Edelstein} alt="Edelstein Homepage" className='w-[545px] h-auto bg-cover rounded-lg hover:scale-110' />
+                    <div className='flex flex-col items-start gap-2'>
+                        <h2 className='text-primary font-bold text-xl'>Edelstein Bibliothek</h2>
+                        <h3 className='text-white text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
+                        <p className='text-white text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <ul className='flex gap-2'>
+                            <li className='border-white border-2 rounded-full p-2'>React</li>
+                            <li className='border-white border-2 rounded-full p-2'>NodeJS</li>
+                            <li className='border-white border-2 rounded-full p-2'>Mongo DB</li>
+                            <li className='border-white border-2 rounded-full p-2'>AWS</li>
+                        </ul>
+                    </div>
+
+                    <div className='flex flex-col gap-4'>
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                             </svg>
+                        </button>
+
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037.75.75 0 0 1-.646 1.353 5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.353 5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037.75.75 0 0 1-.354-1Z" clipRule="evenodd" />
+                          </svg>
+                       </button>
+                    </div>
+                </div>
+
+                <div className='flex items-center gap-10 border-b border-white w-[1240px] h-[350px]'>
+                    <img src={PokemonBattle} alt="Pokemon Battle Game Page" className='w-[545px] h-auto bg-cover rounded-lg hover:scale-110' />
+                    <div className='flex flex-col items-start gap-2'>
+                        <h2 className='text-primary font-bold text-xl'>Pokemon Battle Game</h2>
+                        <h3 className='text-white text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
+                        <p className='text-white text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <ul className='flex gap-2'>
+                            <li className='border-white border-2 rounded-full p-2'>React</li>
+                            <li className='border-white border-2 rounded-full p-2'>NodeJS</li>
+                            <li className='border-white border-2 rounded-full p-2'>Mongo DB</li>
+                        </ul>
+                    </div>
+
+                    <div className='flex flex-col gap-4'>
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                             </svg>
+                        </button>
+
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037.75.75 0 0 1-.646 1.353 5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.353 5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037.75.75 0 0 1-.354-1Z" clipRule="evenodd" />
+                          </svg>
+                       </button>
+                    </div>
+                </div>
+
+                <div className='flex items-center gap-10 border-b border-white w-[1240px] h-[350px]'>
+                    <img src={CarCareAI} alt="Car Care Ai Page" className='w-[545px] h-auto bg-cover rounded-lg hover:scale-110' />
+                    <div className='flex flex-col items-start gap-2'>
+                        <h2 className='text-primary font-bold text-xl'>Car Care Ai</h2>
+                        <h3 className='text-white text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
+                        <p className='text-white text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <ul className='flex gap-2'>
+                            <li className='border-white border-2 rounded-full p-2'>React</li>
+                            <li className='border-white border-2 rounded-full p-2'>NodeJS</li>
+                            <li className='border-white border-2 rounded-full p-2'>Mongo DB</li>
+                            <li className='border-white border-2 rounded-full p-2'>OpenAI</li>
+                        </ul>
+                    </div>
+
+                    <div className='flex flex-col gap-4'>
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                             </svg>
+                        </button>
+
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037.75.75 0 0 1-.646 1.353 5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.353 5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037.75.75 0 0 1-.354-1Z" clipRule="evenodd" />
+                          </svg>
+                       </button>
+                    </div>
+                </div>
+
+                <div className='flex items-center gap-10 border-b border-white w-[1240px] h-[350px]'>
+                    <img src={GermanAutotec} alt="German Autotec Page" className='w-[545px] h-auto bg-cover rounded-lg hover:scale-110' />
+                    <div className='flex flex-col items-start gap-2'>
+                        <h2 className='text-primary font-bold text-xl'>German AutoTec PLC</h2>
+                        <h3 className='text-white text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
+                        <p className='text-white text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <ul className='flex gap-2'>
+                            <li className='border-white border-2 rounded-full p-2'>React</li>
+                            <li className='border-white border-2 rounded-full p-2'>NodeJS</li>
+                            <li className='border-white border-2 rounded-full p-2'>Mongo DB</li>
+                        </ul>
+                    </div>
+
+                    <div className='flex flex-col gap-4'>
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                             </svg>
+                        </button>
+
+                        <button className='rounded-full bg-accent p-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8">
+                            <path fillRule="evenodd" d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037.75.75 0 0 1-.646 1.353 5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.353 5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037.75.75 0 0 1-.354-1Z" clipRule="evenodd" />
+                          </svg>
+                       </button>
+                    </div>
+                </div>
+
+                <button className='border-2 rounded-full p-3 flex items-center gap-2'>
+    View more
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M12 5l7 7-7 7" />
+    </svg>
+</button>
+
+
+            </section>
+
+  
+            {/* <div className="flex max-w-full p-20 items-start gap-16">
+
+
                 <div className="flex items-center gap-6">
                     <div className="w-2 h-60 rounded-full bg-accent"></div>
                     <h1 className="text-6xl text-center [writing-mode:vertical-rl] rotate-180">My Projects</h1>
                     <div className="w-2 h-60 rounded-full bg-accent"></div>
                 </div>
 
-                {/* Grid Layout for Projects */}
                 <section className="grid grid-cols-3 gap-10 w-full">
                     
-                    {/* Snaptask */}
                     <div className="flex flex-col items-center gap-4 w-full">
                         <div className="mockup-browser bg-base-600 border w-full">
                             <div className="mockup-browser-toolbar">
@@ -39,7 +191,6 @@ function Projects() {
                         <p>Project Stack: MERN</p>
                     </div>
 
-                    {/* Edelstein Bibliothek (Flipped Layout) */}
                     <div className="flex flex-col-reverse items-center gap-4 w-full">
                         <div className="mockup-browser bg-base-600 border w-full">
                             <div className="mockup-browser-toolbar">
@@ -54,7 +205,6 @@ function Projects() {
                         <h2 className="text-2xl font-bold">Edelstein Bibliothek</h2>
                     </div>
 
-                    {/* Pokemon Battle */}
                     <div className="flex flex-col items-center gap-4 w-full">
                         <div className="mockup-browser bg-base-600 border w-full">
                             <div className="mockup-browser-toolbar">
@@ -69,7 +219,6 @@ function Projects() {
                         <p>Project Stack: React, Node.js</p>
                     </div>
 
-                    {/* CarCare AI */}
                     <div className="flex flex-col items-center gap-4 w-full">
                         <div className="mockup-browser bg-base-600 border w-full">
                             <div className="mockup-browser-toolbar">
@@ -84,7 +233,6 @@ function Projects() {
                         <p>Project Stack: Python, AI</p>
                     </div>
 
-                    {/* Event Scheduler (Flipped Layout) */}
                     <div className="flex flex-col-reverse items-center gap-4 w-full">
                         <div className="mockup-browser bg-base-600 border w-full">
                             <div className="mockup-browser-toolbar">
@@ -99,7 +247,6 @@ function Projects() {
                         <h2 className="text-2xl font-bold">Event Scheduler</h2>
                     </div>
 
-                    {/* German Autotec */}
                     <div className="flex flex-col items-center gap-4 w-full">
                         <div className="mockup-browser bg-base-600 border w-full">
                             <div className="mockup-browser-toolbar">
@@ -115,7 +262,7 @@ function Projects() {
                     </div>
 
                 </section>
-            </div>
+            </div> */}
         </>
     );
 }

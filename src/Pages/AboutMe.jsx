@@ -4,6 +4,7 @@ import NodeLogo from "../assets/MERN-Logo/Node.js.png";
 import ExpressLogo from "../assets/MERN-Logo/Express.png";
 import MongoDBLogo from "../assets/MERN-Logo/MongoDB.png";
 import Carousel from "../components/Carousel";
+import Skills from "../components/Skills";
 
 function AboutMe() {
     return ( 
@@ -16,19 +17,21 @@ function AboutMe() {
             <div className="flex-1 px-10 text-justify text-lg">
                 <h2 className="p-6 text-4xl font-semibold text-left">{`</ Get to know me>`}</h2>
 
-                <p>👋🏽 My name is Sebastian Schoeneberger, and I'm a junior full-stack web developer with a diverse background and a passion for technology.</p>
-                
-                <p>I started my professional journey at <span className="text-accent font-semibold">Mercedes-Benz</span> in the automotive sector, moved into <span className="text-accent font-semibold">entrepreneurship</span> with multiple businesses, and I am now thrilled to explore new opportunities in the <span className="text-accent font-semibold">tech industry</span>.</p>
-
-                <h3 className="py-6 text-xl font-semibold">What Sets Me Apart</h3>
-                
-                <p>🛠️ <strong>Technical Expertise:</strong> – My experience in vehicle diagnostics at Mercedes-Benz honed my problem-solving skills, which I now apply to coding. I work with <span className="text-accent font-semibold">JavaScript</span>, <span className="text-accent font-semibold">React</span>, <span className="text-accent font-semibold">Node.js</span>, <span className="text-accent font-semibold">Express</span>, <span className="text-accent font-semibold">SQL</span>, <span className="text-accent font-semibold">MongoDB</span>, and more.</p>
-                
-                <p>🚀 <strong>Entrepreneurial Mindset:</strong> – Six years of running businesses gave me expertise in marketing, finance, and leadership—helping me build web applications that truly serve business needs.</p>
-                
-                <p>🌍 <strong>Multilingual & Adaptable:</strong> – Fluent in <span className="text-accent font-semibold">German</span>, <span className="text-accent font-bold">Spanish</span>, and <span className="text-accent font-semibold">English</span>, with global experience across three continents, I thrive in diverse environments and communicate effectively.</p>
-                
-                <p>🔍 <strong>Detail-Oriented & Reliable:</strong> – I uphold high standards, stay committed to delivering quality work, and ensure every project is completed efficiently and on time.</p>
+<div className="text-white opacity-80">
+                    <p>👋🏽 My name is Sebastian Schoeneberger, and I'm a junior full-stack web developer with a diverse background and a passion for technology.</p>
+                    
+                    <p>I started my professional journey at <span className="text-primary font-semibold">Mercedes-Benz</span> in the automotive sector, moved into <span className="text-primary font-semibold">entrepreneurship</span> with multiple businesses, and I am now thrilled to explore new opportunities in the <span className="text-primary font-semibold">tech industry</span>.</p>
+    
+                    <h3 className="py-6 text-xl font-semibold">What Sets Me Apart</h3>
+                    
+                    <p>🛠️ <strong>Technical Expertise:</strong> – My experience in vehicle diagnostics at Mercedes-Benz honed my problem-solving skills, which I now apply to coding. I work with <span className="text-primary font-semibold">JavaScript</span>, <span className="text-primary font-semibold">React</span>, <span className="text-primary font-semibold">Node.js</span>, <span className="text-primary font-semibold">Express</span>, <span className="text-primary font-semibold">SQL</span>, <span className="text-primary font-semibold">MongoDB</span>, and more.</p>
+                    
+                    <p>🚀 <strong>Entrepreneurial Mindset:</strong> – Six years of running businesses gave me expertise in marketing, finance, and leadership—helping me build web applications that truly serve business needs.</p>
+                    
+                    <p>🌍 <strong>Multilingual & Adaptable:</strong> – Fluent in <span className="text-primary font-semibold">German</span>, <span className="text-primary font-bold">Spanish</span>, and <span className="text-primary font-semibold">English</span>, with global experience across three continents, I thrive in diverse environments and communicate effectively.</p>
+                    
+                    <p>🔍 <strong>Detail-Oriented & Reliable:</strong> – I uphold high standards, stay committed to delivering quality work, and ensure every project is completed efficiently and on time.</p>
+</div>
             </div>
 
 
@@ -67,7 +70,8 @@ function AboutMe() {
 
             <h2 className="text-6xl font-bold py-6">Skills</h2>
             <div className="w-16 h-2 rounded-full bg-accent "></div>
-            <Carousel />
+            {/* <Carousel /> */}
+            <Skills />
 
 
         </>
