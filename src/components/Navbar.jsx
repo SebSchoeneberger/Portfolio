@@ -73,8 +73,8 @@ function Navbar() {
             <select className="btn btn-primary rounded-full hover:text-white text-base">
               <option disabled selected>Language</option>
               <option>English</option>
-              <option>German</option>
-              <option>Spanish</option>
+              <option disabled>German (coming soon)</option>
+              <option disabled>Spanish (coming soon)</option>
             </select>
 
           </div>
