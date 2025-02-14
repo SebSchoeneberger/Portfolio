@@ -92,12 +92,11 @@ function AboutMe() {
                         </svg>
                         </div>
                         <div className="timeline-start mb-10 md:text-end text-white">
-                        <time className="font-mono italic text-primary font-semibold">May 2024</time>
-                        <div className="text-xl font-black text-primary pb-2">Full-Stack App & Web Development Bootcamp</div>
-                        <div className="text-lg font-black text-accent pb-2">WBS Coding School / Berlin</div>
-                        • Completed a full-time, 15-week hybrid bootcamp in full-stack web development. <br />
-                        • Gained expertise in HTML, CSS, JavaScript, React, Node.js, Express, and SQL through hands-on projects and real-world applications. <br />
-                        • Participated in on-campus sessions to experience a collaborative work environment.
+                        <time className="font-mono italic text-primary font-semibold">Oct 2024</time>
+                        <div className="text-xl font-black text-primary pb-2">Frontend Development Training</div>
+                        <div className="text-lg font-black text-accent pb-2">Kreativstrom</div>
+                        • Hands-on HTML, CSS and Javascript Training Programm. <br />
+                        • Intensive, hands-on frontend training with expert guidance.
                         </div>
                         <hr />
                     </li>
@@ -116,11 +115,12 @@ function AboutMe() {
                         </svg>
                         </div>
                         <div className="timeline-end md:mb-10 text-white">
-                        <time className="font-mono italic text-primary font-semibold">Oct 2024</time>
-                        <div className="text-xl font-black text-primary pb-2">Frontend Development Training</div>
-                        <div className="text-lg font-black text-accent pb-2">Kreativstrom</div>
-                        • Hands-on HTML, CSS and Javascript Training Programm. <br />
-                        • Intensive, hands-on frontend training with expert guidance.
+                        <time className="font-mono italic text-primary font-semibold">May 2024</time>
+                        <div className="text-xl font-black text-primary pb-2">Full-Stack App & Web Development Bootcamp</div>
+                        <div className="text-lg font-black text-accent pb-2">WBS Coding School / Berlin</div>
+                        • Completed a full-time, 15-week hybrid bootcamp in full-stack web development. <br />
+                        • Gained expertise in HTML, CSS, JavaScript, React, Node.js, Express, and SQL through hands-on projects and real-world applications. <br />
+                        • Participated in on-campus sessions to experience a collaborative work environment.
                         </div>
                         <hr />
                     </li>
@@ -234,6 +234,7 @@ function AboutMe() {
                 <h2 className="p-6 text-4xl font-semibold text-left">Soft Skills</h2>
 
                     <div>
+                        
 
                     </div>
 
