@@ -40,10 +40,10 @@ function Navbar() {
               <a className="text-base hover:text-white">About me</a>
             </li>
             <li>
-              <a className="text-base hover:text-white">Projects</a>
+              <a className="text-base hover:text-white">Skills</a>
             </li>
             <li>
-              <a className="text-base hover:text-white">Skills</a>
+              <a className="text-base hover:text-white">Projects</a>
             </li>
             <li>
               <a className="text-base hover:text-white">Contact</a>
@@ -57,7 +57,7 @@ function Navbar() {
           </button>
 
           {/* Theme Toggle */}
-          <label className="swap swap-rotate ml-4">
+          <label className="swap swap-rotate ml-4 rounded-full p-2  hover:bg-gray-200">
             <input
               type="checkbox"
               className="theme-controller"

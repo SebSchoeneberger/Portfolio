@@ -10,6 +10,8 @@ import germanAutotecLogo from "../assets/Experience-Logo/Mini Logo.jpeg";
 import chilaLogo from "../assets/Experience-Logo/WhatsApp Image 2025-02-12 at 21.26.46.jpeg";
 import inityLogo from "../assets/Experience-Logo/Inity Bar logo.jpg"
 
+import SoftSkills from "../components/SoftSkills";
+
 function AboutMe() {
     return ( 
         <>
@@ -21,7 +23,7 @@ function AboutMe() {
             <div className="flex-1 px-10 text-justify text-lg">
                 <h2 className="p-6 text-4xl font-semibold text-left">{`</ Get to know me>`}</h2>
 
-<div className="text-white opacity-80">
+                <div className="text-white opacity-80">
                     <p>👋🏽 My name is Sebastian Schoeneberger, and I'm a junior full-stack web developer with a diverse background and a passion for technology.</p>
                     
                     <p>I started my professional journey at <span className="text-primary font-semibold">Mercedes-Benz</span> in the automotive sector, moved into <span className="text-primary font-semibold">entrepreneurship</span> with multiple businesses, and I am now thrilled to explore new opportunities in the <span className="text-primary font-semibold">tech industry</span>.</p>
@@ -35,7 +37,7 @@ function AboutMe() {
                     <p>🌍 <strong>Multilingual & Adaptable:</strong> – Fluent in <span className="text-primary font-semibold">German</span>, <span className="text-primary font-bold">Spanish</span>, and <span className="text-primary font-semibold">English</span>, with global experience across three continents, I thrive in diverse environments and communicate effectively.</p>
                     
                     <p>🔍 <strong>Detail-Oriented & Reliable:</strong> – I uphold high standards, stay committed to delivering quality work, and ensure every project is completed efficiently and on time.</p>
-</div>
+                </div>
             </div>
 
 
@@ -96,7 +98,7 @@ function AboutMe() {
                         <div className="text-xl font-black text-primary pb-2">Frontend Development Training</div>
                         <div className="text-lg font-black text-accent pb-2">Kreativstrom</div>
                         • Hands-on HTML, CSS and Javascript Training Programm. <br />
-                        • Intensive, hands-on frontend training with expert guidance.
+                        • Intensive frontend training with expert guidance.
                         </div>
                         <hr />
                     </li>
@@ -176,71 +178,98 @@ function AboutMe() {
                 <h2 className="p-6 text-4xl font-semibold text-left">Experience</h2>
 
                 <div className="collapse collapse-plus bg-[#262626]">
-                    <input type="radio" name="my-accordion-3"  />
+                    <input type="checkbox" name="my-accordion-3"  />
                     <div className="collapse-title text-xl font-medium">
                        <div className="flex items-center gap-4 pb-2">
                             <img src={devlogo} alt="" className="w-12 h-12 rounded-xl" />
                             <h2>Full-Stack Web Developer Freelancer</h2>
                         </div>
-                        <p className="pl-4 text-lg">Sep 2024 -  Present</p>
+                        <p className="pl-4 text-lg">Sep 2024 -  Present | Remote Germany & Ethiopia</p>
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p>• Develop and deploy responsive full-stack web applications using modern frameworks like React and Node.js. <br />
+                        • Collaborate with clients to deliver custom solutions, optimizing performance, UX, and scalability.</p>
                     </div>
                 </div>
 
                 <div className="collapse collapse-plus bg-[#262626]">
-                    <input type="radio" name="my-accordion-3"  />
+                    <input type="checkbox" name="my-accordion-3"  />
                     <div className="collapse-title text-xl font-bold">
                        <div className="flex items-center gap-4 pb-2">
                             <img src={germanAutotecLogo} alt="" className="w-12 h-12 rounded-xl" />
                             <h2>Geman AutoTec <br /><span className="text-lg font-semibold text-accent">Co-Founder & CEO</span></h2>
                         </div>
-                        <p className="pl-4 text-lg font-medium">Jan 2021 - May 2024</p>
+                        <p className="pl-4 text-lg font-medium">Jan 2021 - May 2024 | Addis Ababa, Ethiopia</p>
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p>•Launched and grew a mid-size Mercedes-Benz repair shop in Addis Ababa, employing 10 staff members. <br />
+                        • Managed financial operations, marketing strategies, and human resources to ensure business growth and efficiency. <br />
+                        • Provided technical advisory services and handled international customer service to maintain high customer satisfaction. <br />
+                        • Led the expansion into vehicle detailing services in 2023, resulting in a 35% increase in revenue.
+                        </p>
                     </div>
                 </div>
 
                 <div className="collapse collapse-plus bg-[#262626]">
-                    <input type="radio" name="my-accordion-3"  />
+                    <input type="checkbox" name="my-accordion-3"  />
                     <div className="collapse-title text-xl font-bold">
                        <div className="flex items-center gap-4 pb-2">
                             <img src={chilaLogo} alt="" className="w-12 h-12 rounded-xl" />
                             <h2>Chila <br /><span className="text-lg font-semibold text-accent">Shareholder & Co-owner</span></h2>
                         </div>
-                        <p className="pl-4 text-lg font-medium">Jul 2021 - Apr 2024</p>
+                        <p className="pl-4 text-lg font-medium">Jul 2021 - Apr 2024 | Addis Ababa, Ethiopia</p>
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p>• Assisted in the development of a dog-food and pet shop brand in Addis Ababa. <br />
+                        • Contributed to daily operations and managed store activities to ensure efficient and effective service.</p>
                     </div>
                 </div>
 
                 <div className="collapse collapse-plus bg-[#262626]">
-                    <input type="radio" name="my-accordion-3"  />
+                    <input type="checkbox" name="my-accordion-3"  />
                     <div className="collapse-title text-xl font-bold">
                        <div className="flex items-center gap-4 pb-2">
                             <img src={inityLogo} alt="" className="w-12 h-12 rounded-xl" />
                             <h2>Inity Lounge <br /><span className="text-lg font-semibold text-accent">Co-Owner & Manager</span></h2>
                         </div>
-                        <p className="pl-4 text-lg font-medium">Jan 2019 - Jul 2020</p>
+                        <p className="pl-4 text-lg font-medium">Jan 2019 - Jul 2020 | Addis Ababa, Ethiopia</p>
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p>• Conceptualized and launched a successful lounge and restaurant. <br />
+                        • Managed daily operations, finances, and marketing to ensure efficient functioning and profitability. <br />
+                        • Ceased operations due to the impact of the COVID-19 pandemic.</p>
                     </div>
                 </div>
 
                 <h2 className="p-6 text-4xl font-semibold text-left">Soft Skills</h2>
 
-                    <div>
-                        
-
-                    </div>
+                    <SoftSkills />
 
                 <h2 className="p-6 text-4xl font-semibold text-left">Languages</h2>
 
-                    <div>
+                    <div className="flex flex-col gap-4">
+                        <div className="flex items-center justify-between gap-4 border rounded-lg shadow hover:shadow-2xl hover:scale-105 p-3">
+                            <p className="text-xl font-semibold">German</p>
+                            <progress className="progress progress-primary w-56" value={100} max="100"></progress>
+                        </div>
+
+                        <div className="flex items-center justify-between gap-4 border rounded-lg shadow hover:shadow-2xl hover:scale-105  p-3">
+                            <p className="text-xl font-semibold">Spanish</p>
+                            <progress className="progress progress-primary w-56" value={100} max="100"></progress>
+                        </div>
+
+                        <div className="flex items-center justify-between gap-4 border rounded-lg shadow hover:shadow-2xl hover:scale-105  p-3">
+                            <p className="text-xl font-semibold">English</p>
+                            <progress className="progress progress-accent w-56" value={90} max="100"></progress>
+                        </div>
+                        <div className="flex items-center justify-between gap-4 border rounded-lg shadow hover:shadow-2xl hover:scale-105  p-3">
+                            <p className="text-xl font-semibold">Amharic</p>
+                            <progress className="progress progress-accent w-56" value={65} max="100"></progress>
+                        </div>
+                        <div className="flex items-center justify-between gap-4 border rounded-lg shadow hover:shadow-2xl hover:scale-105  p-3">
+                            <p className="text-xl font-semibold">Italian</p>
+                            <progress className="progress progress-accent w-56" value={30} max="100"></progress>
+                        </div>
                         
                     </div>
 
