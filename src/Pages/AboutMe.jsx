@@ -15,7 +15,7 @@ import SoftSkills from "../components/SoftSkills";
 function AboutMe() {
     return ( 
         <>
-            <h1 className="text-6xl font-bold py-6">About Me</h1>
+            <h1 id="About" className="text-6xl font-bold py-6 scroll-mt-28">About Me</h1>
             <div className="w-16 h-2 rounded-full bg-accent "></div>
 
             <div className="pt-10 flex gap-10">
@@ -278,7 +278,7 @@ function AboutMe() {
 
 
 
-            <h2 className="text-6xl font-bold py-6">Skills</h2>
+            <h2 id="Skills" className="text-6xl font-bold py-6 scroll-mt-28">Skills</h2>
             <div className="w-16 h-2 rounded-full bg-accent "></div>
             {/* <Carousel /> */}
             <Skills />

@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import kinglyInspired from "../assets/1377406_668739349805159_2133052110_n.jpg";
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -21,34 +23,44 @@ function Navbar() {
   return (
     <nav className="flex justify-center p-10">
       <div className="navbar flex justify-between bg-error text-base-100 shadow-md fixed max-w-[80%] border-2 rounded-2xl border-primary px-4 py-2 z-50">
-        <div className="flex-1 flex justify-start items-center gap-2">
+        <HashLink smooth to="/#Home" className="flex-1 flex justify-start items-center gap-2">
           <img src={kinglyInspired} alt="" className="btn-ghost rounded-full w-16 h-16" />
           <a className="btn btn-ghost normal-case text-xl text-primary text-left font-bold">
             Sebastian Schoeneberger
           </a>
-        </div>
+        </HashLink>
 
         <div className="flex-1 flex justify-center items-center font-bold text-2xl">
-          <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="text-base hover:text-white">About me</a>
+              <HashLink smooth to="/#About" className="text-base hover:text-white">
+                About me
+              </HashLink>
             </li>
             <li>
-              <a className="text-base hover:text-white">Skills</a>
+              <HashLink smooth to="/#Skills" className="text-base hover:text-white">
+                Skills
+              </HashLink>
             </li>
             <li>
-              <a className="text-base hover:text-white">Projects</a>
+              <HashLink smooth to="/#Projects" className="text-base hover:text-white">
+                Projects
+              </HashLink>
             </li>
             <li>
-              <a className="text-base hover:text-white">Contact</a>
+              <HashLink smooth to="/#Contact" className="text-base hover:text-white">
+                Contact
+              </HashLink>
             </li>
           </ul>
         </div>
 
         <div className="flex-1 flex justify-end gap-4 items-center">
-          <button className="btn btn-primary rounded-full hover:text-white text-base">
-            Contact
-          </button>
+          <HashLink to="/#Contact">
+            <button className="btn btn-primary rounded-full hover:text-white text-base">
+              Contact
+            </button>
+          </HashLink>
 
           {/* Theme Toggle */}
           <label className="swap swap-rotate ml-4 rounded-full p-2 hover:bg-gray-200">

@@ -8,7 +8,7 @@ import GermanAutotec from '../assets/Projects-Img/Untitled design (3).png';
 function Projects() {
     return ( 
         <>
-            <h2 className="text-6xl font-bold py-6">Projects</h2>
+            <h2 id='Projects' className="text-6xl font-bold py-6 scroll-mt-28">Projects</h2>
             <div className="w-16 h-2 rounded-full bg-accent"></div>
 
             <section className='flex flex-col items-center gap-10 p-10 '>
