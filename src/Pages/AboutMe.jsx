@@ -22,8 +22,7 @@ function AboutMe() {
 
             <div className="flex-1 px-10 text-justify text-lg">
                 <h2 className="p-6 text-4xl font-semibold text-left">{`</ Get to know me>`}</h2>
-
-                <div className="text-white opacity-80">
+                <div className="opacity-80">
                     <p>👋🏽 My name is Sebastian Schoeneberger, and I'm a junior full-stack web developer with a diverse background and a passion for technology.</p>
                     
                     <p>I started my professional journey at <span className="text-primary font-semibold">Mercedes-Benz</span> in the automotive sector, moved into <span className="text-primary font-semibold">entrepreneurship</span> with multiple businesses, and I am now thrilled to explore new opportunities in the <span className="text-primary font-semibold">tech industry</span>.</p>
@@ -93,7 +92,7 @@ function AboutMe() {
                             clipRule="evenodd" />
                         </svg>
                         </div>
-                        <div className="timeline-start mb-10 md:text-end text-white">
+                        <div className="timeline-start mb-10 md:text-end">
                         <time className="font-mono italic text-primary font-semibold">Oct 2024</time>
                         <div className="text-xl font-black text-primary pb-2">Frontend Development Training</div>
                         <div className="text-lg font-black text-accent pb-2">Kreativstrom</div>
@@ -116,7 +115,7 @@ function AboutMe() {
                             clipRule="evenodd" />
                         </svg>
                         </div>
-                        <div className="timeline-end md:mb-10 text-white">
+                        <div className="timeline-end md:mb-10">
                         <time className="font-mono italic text-primary font-semibold">May 2024</time>
                         <div className="text-xl font-black text-primary pb-2">Full-Stack App & Web Development Bootcamp</div>
                         <div className="text-lg font-black text-accent pb-2">WBS Coding School / Berlin</div>
@@ -139,7 +138,7 @@ function AboutMe() {
                             clipRule="evenodd" />
                         </svg>
                         </div>
-                        <div className="timeline-start mb-10 md:text-end text-white">
+                        <div className="timeline-start mb-10 md:text-end">
                         <time className="font-mono italic text-primary font-semibold">Sep 2018</time>
                         <div className="text-xl font-black text-primary pb-2">Automotive Mechatronics Technician</div>
                         <div className="text-lg font-black text-accent pb-2">Mercedes-Benz Group / Frankfurt</div>
@@ -163,7 +162,7 @@ function AboutMe() {
                             clipRule="evenodd" />
                         </svg>
                         </div>
-                        <div className="timeline-end md:mb-10 text-white">
+                        <div className="timeline-end md:mb-10">
                         <time className="font-mono italic text-primary font-semibold">Jan 2010</time>
                         <div className="text-xl font-black text-primary pb-2">International Baccalaureate (IB)</div>
                         <div className="text-lg font-black text-accent pb-2">German Embassy School Addis Abeba</div>
@@ -177,7 +176,7 @@ function AboutMe() {
                 <div className="flex-1">
                 <h2 className="p-6 text-4xl font-semibold text-left">Experience</h2>
 
-                <div className="collapse collapse-plus bg-[#262626]">
+                <div className="collapse collapse-plus shadow-2xl">
                     <input type="checkbox" name="my-accordion-3"  />
                     <div className="collapse-title text-xl font-medium">
                        <div className="flex items-center gap-4 pb-2">
@@ -192,12 +191,12 @@ function AboutMe() {
                     </div>
                 </div>
 
-                <div className="collapse collapse-plus bg-[#262626]">
+                <div className="collapse collapse-plus shadow-2xl">
                     <input type="checkbox" name="my-accordion-3"  />
                     <div className="collapse-title text-xl font-bold">
                        <div className="flex items-center gap-4 pb-2">
                             <img src={germanAutotecLogo} alt="" className="w-12 h-12 rounded-xl" />
-                            <h2>Geman AutoTec <br /><span className="text-lg font-semibold text-accent">Co-Founder & CEO</span></h2>
+                            <h2 className="text-primary">Geman AutoTec <br /><span className="text-lg font-semibold text-accent">Co-Founder & CEO</span></h2>
                         </div>
                         <p className="pl-4 text-lg font-medium">Jan 2021 - May 2024 | Addis Ababa, Ethiopia</p>
                     </div>
@@ -210,12 +209,12 @@ function AboutMe() {
                     </div>
                 </div>
 
-                <div className="collapse collapse-plus bg-[#262626]">
+                <div className="collapse collapse-plus shadow-2xl">
                     <input type="checkbox" name="my-accordion-3"  />
                     <div className="collapse-title text-xl font-bold">
                        <div className="flex items-center gap-4 pb-2">
                             <img src={chilaLogo} alt="" className="w-12 h-12 rounded-xl" />
-                            <h2>Chila <br /><span className="text-lg font-semibold text-accent">Shareholder & Co-owner</span></h2>
+                            <h2 className="text-primary">Chila <br /><span className="text-lg font-semibold text-accent">Shareholder & Co-owner</span></h2>
                         </div>
                         <p className="pl-4 text-lg font-medium">Jul 2021 - Apr 2024 | Addis Ababa, Ethiopia</p>
                     </div>
@@ -225,12 +224,12 @@ function AboutMe() {
                     </div>
                 </div>
 
-                <div className="collapse collapse-plus bg-[#262626]">
+                <div className="collapse collapse-plus shadow-2xl">
                     <input type="checkbox" name="my-accordion-3"  />
                     <div className="collapse-title text-xl font-bold">
                        <div className="flex items-center gap-4 pb-2">
                             <img src={inityLogo} alt="" className="w-12 h-12 rounded-xl" />
-                            <h2>Inity Lounge <br /><span className="text-lg font-semibold text-accent">Co-Owner & Manager</span></h2>
+                            <h2 className="text-primary">Inity Lounge <br /><span className="text-lg font-semibold text-accent">Co-Owner & Manager</span></h2>
                         </div>
                         <p className="pl-4 text-lg font-medium">Jan 2019 - Jul 2020 | Addis Ababa, Ethiopia</p>
                     </div>

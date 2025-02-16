@@ -9,36 +9,36 @@ function Contact() {
                     
                     {/* Name Input */}
                     <label className="w-full">
-                        <span className="text-white text-lg font-tomorrow">Name</span>
+                        <span className=" text-lg font-tomorrow">Name</span>
                         <input 
                             type="text" 
                             placeholder="Enter your Name" 
-                            className="w-full h-[92px] bg-white/10 border border-white/15 rounded-xl px-4 text-white placeholder-white/60 text-lg font-tomorrow"
+                            className="w-full h-[92px] bg-white/10 dark:bg-black/10 border border-white/15 rounded-xl px-4  placeholder-white/60 text-lg font-tomorrow"
                         />
                     </label>
 
                     {/* Email Input */}
                     <label className="w-full">
-                        <span className="text-white text-lg font-tomorrow">Email</span>
+                        <span className=" text-lg font-tomorrow">Email</span>
                         <input 
                             type="text" 
                             placeholder="Enter your Email" 
-                            className="w-full h-[92px] bg-white/10 border border-white/15 rounded-xl px-4 text-white placeholder-white/60 text-lg font-tomorrow"
+                            className="w-full h-[92px] bg-white/10 border border-white/15 rounded-xl px-4  placeholder-white/60 text-lg font-tomorrow"
                         />
                     </label>
 
                     {/* Message Input */}
                     <label className="w-full">
-                        <span className="text-white text-lg font-tomorrow">Message</span>
+                        <span className=" text-lg font-tomorrow">Message</span>
                         <textarea 
                             placeholder="Type your Message here" 
-                            className="w-full h-[144px] bg-white/10 border border-white/15 rounded-xl px-4 text-white placeholder-white/60 text-lg font-tomorrow resize-none"
+                            className="w-full h-[144px] bg-white/10 border border-white/15 rounded-xl px-4  placeholder-white/60 text-lg font-tomorrow resize-none"
                         />
                     </label>
 
                     {/* Submit Button */}
                     <button className="w-full h-16 bg-[#61DAFB] rounded-xl flex justify-center items-center">
-                        <span className="text-black text-lg font-tomorrow font-semibold">Send Message</span>
+                        <span className=" text-lg font-tomorrow font-semibold">Send Message</span>
                     </button>
                 </form>
 

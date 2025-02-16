@@ -13,16 +13,16 @@ function Projects() {
 
             <section className='flex flex-col items-center gap-10 p-10 '>
 
-                <div className='flex items-center gap-10 border-b border-white w-[1240px] h-[350px]'>
+                <div className='flex items-center gap-10 border-b border-white dark:border-black w-[1240px] h-[350px]'>
                     <img src={Snaptask} alt="Snaptask Homepage" className='w-[545px] h-auto bg-cover rounded-lg hover:scale-110' />
                     <div className='flex flex-col items-start gap-2'>
                         <h2 className='text-primary font-bold text-xl'>Snaptask</h2>
-                        <h3 className='text-white text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
-                        <p className='text-white text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <h3 className='text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
+                        <p className=' text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
                         <ul className='flex gap-2'>
-                            <li className='border-white border-2 rounded-full p-2'>React</li>
-                            <li className='border-white border-2 rounded-full p-2'>NodeJS</li>
-                            <li className='border-white border-2 rounded-full p-2'>Mongo DB</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>React</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>NodeJS</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>Mongo DB</li>
                         </ul>
                     </div>
 
@@ -41,17 +41,17 @@ function Projects() {
                     </div>
                 </div>
 
-                <div className='flex items-center gap-10 border-b border-white w-[1240px] h-[350px]'>
+                <div className='flex items-center gap-10 border-b border-white dark:border-black w-[1240px] h-[350px]'>
                     <img src={Edelstein} alt="Edelstein Homepage" className='w-[545px] h-auto bg-cover rounded-lg hover:scale-110' />
                     <div className='flex flex-col items-start gap-2'>
                         <h2 className='text-primary font-bold text-xl'>Edelstein Bibliothek</h2>
-                        <h3 className='text-white text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
-                        <p className='text-white text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <h3 className=' text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
+                        <p className=' text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
                         <ul className='flex gap-2'>
-                            <li className='border-white border-2 rounded-full p-2'>React</li>
-                            <li className='border-white border-2 rounded-full p-2'>NodeJS</li>
-                            <li className='border-white border-2 rounded-full p-2'>Mongo DB</li>
-                            <li className='border-white border-2 rounded-full p-2'>AWS</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>React</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>NodeJS</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>Mongo DB</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>AWS</li>
                         </ul>
                     </div>
 
@@ -70,16 +70,16 @@ function Projects() {
                     </div>
                 </div>
 
-                <div className='flex items-center gap-10 border-b border-white w-[1240px] h-[350px]'>
+                <div className='flex items-center gap-10 border-b border-white dark:border-black w-[1240px] h-[350px]'>
                     <img src={PokemonBattle} alt="Pokemon Battle Game Page" className='w-[545px] h-auto bg-cover rounded-lg hover:scale-110' />
                     <div className='flex flex-col items-start gap-2'>
                         <h2 className='text-primary font-bold text-xl'>Pokemon Battle Game</h2>
-                        <h3 className='text-white text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
-                        <p className='text-white text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <h3 className=' text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
+                        <p className=' text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
                         <ul className='flex gap-2'>
-                            <li className='border-white border-2 rounded-full p-2'>React</li>
-                            <li className='border-white border-2 rounded-full p-2'>NodeJS</li>
-                            <li className='border-white border-2 rounded-full p-2'>Mongo DB</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>React</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>NodeJS</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>Mongo DB</li>
                         </ul>
                     </div>
 
@@ -98,17 +98,17 @@ function Projects() {
                     </div>
                 </div>
 
-                <div className='flex items-center gap-10 border-b border-white w-[1240px] h-[350px]'>
+                <div className='flex items-center gap-10 border-b border-white dark:border-black w-[1240px] h-[350px]'>
                     <img src={CarCareAI} alt="Car Care Ai Page" className='w-[545px] h-auto bg-cover rounded-lg hover:scale-110' />
                     <div className='flex flex-col items-start gap-2'>
                         <h2 className='text-primary font-bold text-xl'>Car Care Ai</h2>
-                        <h3 className='text-white text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
-                        <p className='text-white text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <h3 className=' text-base font-normal opacity-60 pb-6'>Fullstack Website</h3>
+                        <p className=' text-base font-normal opacity-60'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
                         <ul className='flex gap-2'>
-                            <li className='border-white border-2 rounded-full p-2'>React</li>
-                            <li className='border-white border-2 rounded-full p-2'>NodeJS</li>
-                            <li className='border-white border-2 rounded-full p-2'>Mongo DB</li>
-                            <li className='border-white border-2 rounded-full p-2'>OpenAI</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>React</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>NodeJS</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>Mongo DB</li>
+                            <li className='border-white dark:border-black border-2 rounded-full p-2'>OpenAI</li>
                         </ul>
                     </div>
 

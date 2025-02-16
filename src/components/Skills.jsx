@@ -32,7 +32,7 @@ function Skills() {
 
             <div className="flex flex-wrap justify-center gap-4 p-10 max-w-[80%] mx-auto">
             {techImages.map((tech, index) => (
-                <div key={index} className="flex justify-center items-center gap-4 h-20 max-w-[calc(25%-1rem)] rounded-2xl border-2 border-transparent bg-[#262626] hover:scale-110 p-10">
+                <div key={index} className="flex justify-center items-center gap-4 h-20 max-w-[calc(25%-1rem)] rounded-2xl border-2 border-transparent shadow-2xl hover:scale-110 p-10">
                 <img
                     className="w-14 h-14 object-contain rounded-[20px] shadow-2xl"
                     src={tech.src}
