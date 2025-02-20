@@ -11,44 +11,50 @@ function Contact() {
                     
                     {/* Name Input */}
                     <label className="w-full">
-                        <span className=" text-lg font-tomorrow">Name</span>
+                        <span className=" text-lg font-tomorrow font-semibold">Name</span>
                         <input 
                             type="text" 
                             placeholder="Enter your Name" 
-                            className="w-full h-[92px] bg-white/10 dark:bg-black/10 border border-white/15 rounded-xl px-4  placeholder-white/60 text-lg font-tomorrow"
+                            className="w-full h-16 bg-transparent border border-black rounded-xl px-4 text-lg font-tomorrow"
                         />
                     </label>
 
                     {/* Email Input */}
                     <label className="w-full">
-                        <span className=" text-lg font-tomorrow">Email</span>
+                        <span className=" text-lg font-tomorrow font-semibold">Email</span>
                         <input 
                             type="text" 
                             placeholder="Enter your Email" 
-                            className="w-full h-[92px] bg-white/10 border border-white/15 rounded-xl px-4  placeholder-white/60 text-lg font-tomorrow"
+                            className="w-full h-16 bg-transparent border border-black rounded-xl px-4 text-lg font-tomorrow"
                         />
                     </label>
 
                     {/* Message Input */}
                     <label className="w-full">
-                        <span className=" text-lg font-tomorrow">Message</span>
+                        <span className=" text-lg font-tomorrow font-semibold">Message</span>
                         <textarea 
                             placeholder="Type your Message here" 
-                            className="w-full h-[144px] bg-white/10 border border-white/15 rounded-xl px-4  placeholder-white/60 text-lg font-tomorrow resize-none"
+                            className="w-full h-36 bg-transparent border border-black rounded-xl px-4 text-lg font-tomorrow"
                         />
                     </label>
 
                     {/* Submit Button */}
-                    <button className="w-full h-16 bg-[#61DAFB] rounded-xl flex justify-center items-center">
+                    <button className="w-full h-16 bg-[#61DAFB] rounded-xl flex justify-center items-center hover:scale-105 duration-300">
                         <span className=" text-lg font-tomorrow font-semibold">Send Message</span>
                     </button>
                 </form>
 
             </div>
+      {/* <div className="flex justify-center items-center gap-5 p-10 pb-14">
+        <div className="w-80 h-1 bg-black"></div>
+        <a className="text-2xl">Or</a>
+        <div className="w-80 h-1 bg-black"></div>
+      </div> */}
 
-            <div>
+
+           <div>
   <ul className="flex justify-center items-center gap-5">
-    <div className="w-32 h-1 bg-secondary"></div>
+    <div className="w-10 sm:w-32 h-1 bg-secondary"></div>
 
     <li>
       <NavLink to="https://www.linkedin.com/in/sebastian-schoeneberger/" target="_blank">
@@ -126,7 +132,7 @@ function Contact() {
       </a>
     </li>
 
-    <div className="w-32 h-1 bg-secondary"></div>
+    <div className="w-10 sm:w-32 h-1 bg-secondary"></div>
   </ul>
 </div>
 

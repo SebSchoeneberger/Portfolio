@@ -12,6 +12,9 @@ export default {
         'react-blue': '#61DAFB',
         'custom-dark': '#305252',
       },
+      screens: {
+        md: '769px',
+      },
     },
   },
   plugins: [daisyui],

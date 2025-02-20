@@ -9,16 +9,16 @@ import { NavLink } from "react-router-dom";
 function Home() {
   return (
     <>
-      <main className="bg-neutral p-10 flex flex-col justify-start items-center">
-        <section id="Home" className="max-w-[80%] flex justify-center items-center text-left gap-10 mx-auto scroll-mt-28">
+      <main className="bg-neutral p-5 sm:p-10 flex flex-col justify-start items-center">
+        <section id="Home" className="max-w-[82%] flex flex-col-reverse md:flex-row justify-center items-center text-center md:text-left gap-10 mx-auto scroll-mt-28 pb-5">
           {/* Left Section */}
-          <div className="flex flex-1 flex-col justify-center items-start h-screen text-4xl gap-5">
-            <h2 className=" font-bold">Greetings 👋🏽</h2>
-            <a className="text-6xl text-primary">
+          <div className="flex flex-1 flex-col justify-center items-center md:items-start h-screen text-3xl sm:text-4xl gap-5">
+            <h2 className="font-bold">Greetings 👋🏽</h2>
+            <a className="text-4xl sm:text-6xl text-primary">
               I'm <strong className="text-secondary">Sebastian Schoeneberger</strong>
             </a>
-            <h3 className="text-accent text-[2.7rem]">And I am a <strong>Full-Stack Developer</strong></h3>
-            <p className="text-2xl flex flex-col">
+            <h3 className="text-accent text-3xl sm:text-[2.7rem]">And I am a <strong>Full-Stack Developer</strong></h3>
+            <p className="text-xl sm:text-2xl flex flex-col">
               <span>With a background in mechatronics👨🏽‍🔧 and business management📊, I combine technical expertise, problem-solving, and a multicultural🌍 perspective to create impactful web solutions.</span>
               <span className="text-secondary font-semibold pt-2"> Let’s build solutions that make an impact!</span>
             </p>
@@ -26,16 +26,16 @@ function Home() {
           </div>
 
           {/* Right Section */}
-          <div className="flex flex-1 gap-5 justify-evenly items-center h-screen">
+          <div className="flex flex-1 gap-5 sm:gap-10 pt-10 md:pt-0 md:gap-5 justify-evenly items-center h-screen">
             <img
               src={img}
               alt="Profile Picture Sebastian Schoeneberger"
-              className="rounded-full w-96 h-auto border-4 border-secondary"
+              className="rounded-full w-56 sm:w-96 h-auto border-4 border-secondary"
             />
 
             <div>
-              <ul className="flex flex-col justify-center items-center gap-5">
-                <div className="w-1 h-32 bg-secondary"></div>
+              <ul className="flex flex-1 flex-col justify-center items-center gap-5">
+                <div className="w-1 h-20 sm:h-32 bg-secondary"></div>
                   <li>
                 <NavLink to="https://www.linkedin.com/in/sebastian-schoeneberger/" target="_blank">
                     <svg
@@ -110,15 +110,15 @@ function Home() {
                     </svg>
                   </a>
                 </li>
-                <div className="w-1 h-32 bg-secondary"></div>
+                <div className="w-1 h-20 sm:h-32 bg-secondary"></div>
               </ul>
             </div>
           </div>
         </section>
         <Lottie animationData={animationData} style={{ width: 80, height: 80 }} />
         <AboutMe />
-        <Projects />
-        <Contact />
+        {/* <Projects /> */}
+        {/* <Contact /> */}
 
       </main>
     </>

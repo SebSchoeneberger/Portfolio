@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const { theme, setTheme } = useTheme();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
 
   const toggleTheme = () => {
@@ -17,21 +18,24 @@ function Navbar() {
 
   const changeLanguage = (lang) => {
     setSelectedLanguage(lang);
-    setDropdownOpen(false);
+    setLanguageDropdownOpen(false);
   };
 
   return (
     <nav className="flex justify-center p-10">
-      <div className="navbar flex justify-between bg-error text-base-100 shadow-md fixed max-w-[80%] border-2 rounded-2xl border-primary px-4 py-2 z-50">
-        <HashLink smooth to="/#Home" className="flex-1 flex justify-start items-center gap-2">
+      <div className="navbar flex justify-between bg-error text-base-100 shadow-md fixed max-w-[82%] border-2 rounded-2xl border-primary px-4 py-2 z-50">
+
+        <HashLink smooth to="/#Home" className="flex flex-1 justify-start items-center gap-2">
           <img src={kinglyInspired} alt="" className="btn-ghost rounded-full w-16 h-16" />
-          <a className="btn btn-ghost normal-case text-xl text-primary text-left font-bold">
-            Sebastian Schoeneberger
+          <a className="hidden sm:block btn-ghost normal-case text-xl text-primary text-left font-bold p-2 rounded-xl">
+            Sebastian <br /> Schoeneberger
           </a>
         </HashLink>
 
-        <div className="flex-1 flex justify-center items-center font-bold text-2xl">
-        <ul className="menu menu-horizontal px-1">
+
+        {/* Original Horizontal Menu for Large Screens */}
+        <div className="hidden md:flex flex-1 justify-center items-center font-bold text-2xl">
+          <ul className="menu menu-horizontal px-1">
             <li>
               <HashLink smooth to="/#About" className="text-base hover:text-white">
                 About me
@@ -57,7 +61,7 @@ function Navbar() {
 
         <div className="flex-1 flex justify-end gap-4 items-center">
           <HashLink to="/#Contact">
-            <button className="btn btn-primary rounded-full hover:text-white text-base">
+            <button className="hidden md:btn btn-primary rounded-full hover:text-white text-base">
               Contact
             </button>
           </HashLink>
@@ -80,7 +84,7 @@ function Navbar() {
 
           {/* Language Selector */}
           <div className="relative">
-            <button onClick={() => setDropdownOpen(!dropdownOpen)} className="p-2 rounded-full hover:bg-gray-200 flex items-center gap-2">
+            <button onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)} className="p-2 rounded-full hover:bg-gray-200 flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -96,7 +100,7 @@ function Navbar() {
                 />
               </svg>
             </button>
-            {dropdownOpen && (
+            {languageDropdownOpen && (
               <ul className="absolute bg-white border rounded-md mt-2 shadow-lg p-2 w-40">
                 <li onClick={() => changeLanguage("English")} className="p-2 hover:bg-gray-200 cursor-pointer">
                   English
@@ -110,6 +114,43 @@ function Navbar() {
               </ul>
             )}
           </div>
+
+           {/* Dropdown Menu Button for Medium Screens */}
+        <div className="dropdown dropdown-end">
+          <button onClick={() => setDropdownOpen(!dropdownOpen)} className="md:hidden p-2">
+            {/* Icon for dropdown menu */}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+  
+          {/* Dropdown Menu for Medium Screens */}
+          {dropdownOpen && (
+            <ul className="dropdown-content flex flex-col justify-start items-start text-black bg-white border rounded-md mt-2 shadow-lg p-2 w-40 md:hidden">
+              <li>
+                <HashLink smooth to="/#About" className="text-base hover:text-white">
+                  About me
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#Skills" className="text-base hover:text-white">
+                  Skills
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#Projects" className="text-base hover:text-white">
+                  Projects
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/#Contact" className="text-base hover:text-white">
+                  Contact
+                </HashLink>
+              </li>
+            </ul>
+          )}
+        </div>
+
         </div>
       </div>
     </nav>

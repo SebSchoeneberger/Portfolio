@@ -18,10 +18,10 @@ function AboutMe() {
             <h1 id="About" className="text-6xl font-bold py-6 scroll-mt-28">About Me</h1>
             <div className="w-16 h-2 rounded-full bg-accent "></div>
 
-            <div className="pt-10 flex gap-10">
+            <div className="pt-10 flex flex-col md:flex-row gap-10">
 
             <div className="flex-1 px-10 text-justify text-lg">
-                <h2 className="p-6 text-4xl font-semibold text-left">{`</ Get to know me>`}</h2>
+                <h2 className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left">{`</ Get to know me>`}</h2>
                 <div className="opacity-80">
                     <p>👋🏽 My name is Sebastian Schoeneberger, and I'm a junior full-stack web developer with a diverse background and a passion for technology.</p>
                     
@@ -43,29 +43,30 @@ function AboutMe() {
 
             <div className="flex-1 flex flex-col items-center justify-start gap-5">
                 <img src={img2} className="w-56 rounded-full border-4 border-secondary" alt="" />
-                <h2 className="p-4 text-4xl font-semibold text-center">{`</ Tech Stack>`}</h2>
-                <div className="flex gap-4">
+                <h2 className="p-4 text-2xl sm:text-4xl font-semibold text-center">{`</ Tech Stack>`}</h2>
+                <div className="flex gap-2 sm:gap-4">
                     <div className="flex flex-col items-center gap-3">
-                        <img src={MongoDBLogo} className="w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
-                        <p className="text-center text-5xl text-black font-bold">M</p>
-                        <p className="px-3 py-2 bg-error text-secondary font-semibold rounded-3xl">Mongo DB</p>
+                        <img src={MongoDBLogo} className="w-20 sm:w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
+                        <p className="text-center text-3xl sm:text-5xl text-black font-bold">M</p>
+                        <p className="hidden sm:inline px-3 py-2 bg-error text-secondary font-semibold rounded-3xl">Mongo DB</p>
+                        <p className="sm:hidden px-3 py-2 bg-error text-secondary font-semibold rounded-3xl">Mongo</p>
                     </div>
 
                     <div className="flex flex-col items-center gap-3">
-                        <img src={ExpressLogo} className="w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
-                        <p className="text-center text-5xl text-black font-bold">E</p>
+                        <img src={ExpressLogo} className="w-20 sm:w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
+                        <p className="text-center text-3xl sm:text-5xl text-black font-bold">E</p>
                         <p className="px-3 py-2 bg-error text-black font-semibold rounded-3xl">Express.js</p>
                     </div>
 
                     <div className="flex flex-col items-center gap-3">
-                        <img src={ReactLogo} className="w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
-                        <p className="text-center text-5xl text-black font-bold">R</p>
+                        <img src={ReactLogo} className="w-20 sm:w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
+                        <p className="text-center text-3xl sm:text-5xl text-black font-bold">R</p>
                         <p className="px-3 py-2 bg-error text-accent font-semibold rounded-3xl">React.js</p>
                     </div>
 
                     <div className="flex flex-col items-center gap-3">
-                        <img src={NodeLogo} className="w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
-                        <p className="text-center text-5xl text-black font-bold">N</p>
+                        <img src={NodeLogo} className="w-20 sm:w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
+                        <p className="text-center text-3xl sm:text-5xl text-black font-bold">N</p>
                         <p className="px-3 py-2 bg-error text-primary font-semibold rounded-3xl">Node.js</p>
                     </div>
                 </div>
@@ -73,7 +74,7 @@ function AboutMe() {
 
             </div>
 
-            <section className="flex gap-10 p-10">
+            <section className="flex flex-col md:flex-row gap-10 p-2 sm:p-10">
 
                 <div className="flex-1">
                     <h2 className="p-6 text-4xl font-semibold text-left">Education</h2>

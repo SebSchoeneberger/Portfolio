@@ -4,14 +4,14 @@ function Footer() {
   return (
     <>
       <footer className="footer footer-center bg-error text-primary p-10 flex flex-col justify-center items-center">
-        <div className="flex justify-between items-center w-full px-24 gap-10">
+        <div className="flex flex-col sm:flex-row justify-between items-center w-full px-10 md:px-24 gap-10">
           {/* Navigation Links */}
-          <div className="flex justify-center gap-20 items-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-20 items-center">
             <div className="flex flex-col gap-10 items-start">
               <div className="flex justify-center items-center gap-2">
                 <img
                   src={kinglyInspired}
-                  alt=""
+                  alt="logo picture"
                   className="btn-ghost rounded-full w-16 h-16"
                 />
                 <a className="btn btn-ghost normal-case text-xl text-primary text-left font-bold">
@@ -28,9 +28,9 @@ function Footer() {
               </div>
             </div>
 
-            <nav className="flex flex-col gap-4">
+            <nav className="flex sm:flex-col gap-4">
               <a className="text-accent font-bold" href="">Links</a>
-              <a className="link link-hover text-secondary">About me</a>
+              <a className="link link-hover text-secondary">About</a>
               <a className="link link-hover text-secondary">Contact</a>
               <a className="link link-hover text-secondary">Skills</a>
               <a className="link link-hover text-secondary">Projects</a>
@@ -38,7 +38,7 @@ function Footer() {
           </div>
 
           {/* Subscribe Section */}
-          <div className="join pt-4">
+          <div className="join pt-4 flex flex-col gap-2 md:flex-row">
             <input
               type="text"
               placeholder="username@site.com"
@@ -50,7 +50,7 @@ function Footer() {
 
       <div className="w-[90%] h-1 bg-secondary"></div>
 
-        <div className="flex justify-between items-center w-full px-24 gap-10">
+        <div className="flex flex-col sm:flex-row justify-between items-center w-full px-24 gap-10">
           {/* Footer Disclaimer */}
           <aside>
             <p>
