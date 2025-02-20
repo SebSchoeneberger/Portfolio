@@ -117,8 +117,8 @@ function Home() {
         </section>
         <Lottie animationData={animationData} style={{ width: 80, height: 80 }} />
         <AboutMe />
-        {/* <Projects /> */}
-        {/* <Contact /> */}
+        <Projects />
+        <Contact />
 
       </main>
     </>
