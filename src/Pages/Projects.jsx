@@ -50,7 +50,7 @@ function Projects() {
                     <div className='flex flex-col items-center md:items-start gap-2'>
                         <h2 className='text-primary font-bold text-2xl'>Edelstein Bibliothek</h2>
                         <h3 className='text-base font-normal pb-6'>Fullstack Website</h3>
-                        <p className='text-base font-normal opacity-50'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <p className='text-base font-normal opacity-50'>A Website created for a gemstone seller to showcase and manage their inventory. This platform allows users to explore gemstones using advanced filters, view detailed properties, and learn more about their healing and spiritual benefits.</p>
                         <ul className='flex flex-wrap justify-center items-center gap-2'>
                             <li className='border-white dark:border-black border-2 rounded-full p-2'>React</li>
                             <li className='border-white dark:border-black border-2 rounded-full p-2'>NodeJS</li>
@@ -81,7 +81,7 @@ function Projects() {
                     <div className='flex flex-col items-center md:items-start gap-2'>
                         <h2 className='text-primary font-bold text-2xl'>Pokemon Battle Game</h2>
                         <h3 className='text-base font-normal pb-6'>Fullstack Website</h3>
-                        <p className='text-base font-normal opacity-50'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <p className='text-base font-normal opacity-50'>A Pokémon battle game page where players can choose Pokémon, battle opponents, and see real-time health updates.</p>
                         <ul className='flex flex-wrap justify-center items-center gap-2'>
                             <li className='border-white dark:border-black border-2 rounded-full p-2'>React</li>
                             <li className='border-white dark:border-black border-2 rounded-full p-2'>NodeJS</li>
@@ -109,7 +109,7 @@ function Projects() {
                     <div className='flex flex-col items-center md:items-start gap-2'>
                         <h2 className='text-primary font-bold text-2xl'>Car Care Ai</h2>
                         <h3 className='text-base font-normal pb-6'>Fullstack Website</h3>
-                        <p className='text-base font-normal opacity-50'>SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.</p>
+                        <p className='text-base font-normal opacity-50'>CarCare AI is a cutting-edge platform that uses artificial intelligence to simplify car diagnostics. Users can describe their car issues, and the AI provides quick, reliable solutions and troubleshooting advice.</p>
                         <ul className='flex flex-wrap justify-center items-center gap-2'>
                             <li className='border-white dark:border-black border-2 rounded-full p-2'>React</li>
                             <li className='border-white dark:border-black border-2 rounded-full p-2'>NodeJS</li>
