@@ -21,7 +21,7 @@ function AboutMe() {
             <div className="pt-10 flex flex-col md:flex-row gap-10">
 
             <div className="flex-1 px-10 text-justify text-lg">
-                <h2 className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left">{`</ Get to know me>`}</h2>
+                <h2 className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left">Get to know me</h2>
                 <div className="opacity-80">
                     <p>👋🏽 My name is Sebastian Schoeneberger, and I'm a junior full-stack web developer with a diverse background and a passion for technology.</p>
                     
@@ -43,7 +43,7 @@ function AboutMe() {
 
             <div className="flex-1 flex flex-col items-center justify-start gap-5">
                 <img src={img2} className="w-56 rounded-full border-4 border-secondary" alt="" />
-                <h2 className="p-4 text-2xl sm:text-4xl font-semibold text-center">{`</ Tech Stack>`}</h2>
+                <h2 className="p-4 text-2xl sm:text-4xl font-semibold text-center">Tech Stack</h2>
                 <div className="flex gap-2 sm:gap-4">
                     <div className="flex flex-col items-center gap-3 w-20 sm:w-32">
                         <img src={MongoDBLogo} className="w-full border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
