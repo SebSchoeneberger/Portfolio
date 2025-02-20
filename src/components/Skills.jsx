@@ -21,7 +21,7 @@ function Skills() {
         { src: PostmanLogo, alt: 'Postman' },
         { src: GitLogo, alt: 'Git' },
         { src: GitHubLogo, alt: 'GitHub' },
-        { src: ViteLogo, alt: 'Vite.js' },
+        { src: ViteLogo, alt: 'Vite' },
         { src: CanvaLogo, alt: 'Canva' },
         { src: FigmaLogo, alt: 'Figma' },
       ];
@@ -30,9 +30,9 @@ function Skills() {
     return (
         <>
 
-            <div className="flex flex-wrap justify-center gap-4 p-10 max-w-[80%] mx-auto">
+            <div className="flex flex-wrap justify-center gap-4 p-5 sm:p-10 max-w-[80%] mx-auto">
             {techImages.map((tech, index) => (
-                <div key={index} className="flex flex-col md:flex-row justify-center items-center min-w-[120px] max-w-[200px] gap-1 md:gap-4 h-24 md:h-20 md:max-w-[calc(25%-1rem)] rounded-2xl border-2 border-transparent shadow-2xl hover:scale-110 md:p-10">
+                <div key={index} className="flex flex-col md:flex-row justify-center items-center min-w-[100px] sm:min-w-[120px] p-2 max-w-[200px] gap-1 md:gap-4 h-24 md:h-20 md:max-w-[calc(25%-1rem)] rounded-2xl border-2 border-transparent shadow-2xl hover:scale-110 md:p-10">
                 <img
                     className="w-14 h-14 object-contain rounded-[20px] shadow-2xl"
                     src={tech.src}

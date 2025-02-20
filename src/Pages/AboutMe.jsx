@@ -45,36 +45,39 @@ function AboutMe() {
                 <img src={img2} className="w-56 rounded-full border-4 border-secondary" alt="" />
                 <h2 className="p-4 text-2xl sm:text-4xl font-semibold text-center">{`</ Tech Stack>`}</h2>
                 <div className="flex gap-2 sm:gap-4">
-                    <div className="flex flex-col items-center gap-3">
-                        <img src={MongoDBLogo} className="w-20 sm:w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
+                    <div className="flex flex-col items-center gap-3 w-20 sm:w-32">
+                        <img src={MongoDBLogo} className="w-full border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
                         <p className="text-center text-3xl sm:text-5xl text-black font-bold">M</p>
                         <p className="hidden sm:inline px-3 py-2 bg-error text-secondary font-semibold rounded-3xl">Mongo DB</p>
                         <p className="sm:hidden px-3 py-2 bg-error text-secondary font-semibold rounded-3xl">Mongo</p>
                     </div>
 
-                    <div className="flex flex-col items-center gap-3">
-                        <img src={ExpressLogo} className="w-20 sm:w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
+                    <div className="flex flex-col items-center gap-3 w-20 sm:w-32">
+                        <img src={ExpressLogo} className="w-auto border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
                         <p className="text-center text-3xl sm:text-5xl text-black font-bold">E</p>
-                        <p className="px-3 py-2 bg-error text-black font-semibold rounded-3xl">Express.js</p>
+                        <p className="hidden sm:inline px-3 py-2 bg-error text-black font-semibold rounded-3xl">Express.js</p>
+                        <p className="sm:hidden px-3 py-2 bg-error text-black font-semibold rounded-3xl">Express</p>
                     </div>
 
-                    <div className="flex flex-col items-center gap-3">
-                        <img src={ReactLogo} className="w-20 sm:w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
+                    <div className="flex flex-col items-center gap-3 w-20 sm:w-32">
+                        <img src={ReactLogo} className="w-auto border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
                         <p className="text-center text-3xl sm:text-5xl text-black font-bold">R</p>
-                        <p className="px-3 py-2 bg-error text-accent font-semibold rounded-3xl">React.js</p>
+                        <p className="hidden sm:inline px-3 py-2 bg-error text-accent font-semibold rounded-3xl">React.js</p>
+                        <p className="sm:hidden px-3 py-2 bg-error text-accent font-semibold rounded-3xl">React</p>
                     </div>
 
-                    <div className="flex flex-col items-center gap-3">
-                        <img src={NodeLogo} className="w-20 sm:w-32 border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
+                    <div className="flex flex-col items-center gap-3 w-20 sm:w-32">
+                        <img src={NodeLogo} className="w-auto border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
                         <p className="text-center text-3xl sm:text-5xl text-black font-bold">N</p>
-                        <p className="px-3 py-2 bg-error text-primary font-semibold rounded-3xl">Node.js</p>
+                        <p className="hidden sm:inline px-3 py-2 bg-error text-primary font-semibold rounded-3xl">Node.js</p>
+                        <p className="sm:hidden px-3 py-2 bg-error text-primary font-semibold rounded-3xl">Node</p>
                     </div>
                 </div>
             </div>
 
             </div>
 
-            <section className="flex flex-col md:flex-row gap-10 p-2 sm:p-10">
+            <section className="flex flex-col md:flex-row gap-10 p-4 sm:p-10">
 
                 <div className="flex-1">
                     <h2 className="p-6 text-4xl font-semibold text-left">Education</h2>
@@ -182,7 +185,8 @@ function AboutMe() {
                     <div className="collapse-title text-xl font-medium">
                        <div className="flex items-center gap-4 pb-2">
                             <img src={devlogo} alt="" className="w-12 h-12 rounded-xl" />
-                            <h2>Full-Stack Web Developer Freelancer</h2>
+                            <h2 className="text-primary">Self-employed <br /><span className="text-lg font-semibold text-accent">Full-Stack Web Developer Freelancer</span></h2>
+
                         </div>
                         <p className="pl-4 text-lg">Sep 2024 -  Present | Remote Germany & Ethiopia</p>
                     </div>

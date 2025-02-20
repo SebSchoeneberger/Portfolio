@@ -54,7 +54,7 @@ function Contact() {
 
            <div>
   <ul className="flex justify-center items-center gap-5">
-    <div className="w-10 sm:w-32 h-1 bg-secondary"></div>
+    <div className="w-6 sm:w-32 h-1 bg-secondary"></div>
 
     <li>
       <NavLink to="https://www.linkedin.com/in/sebastian-schoeneberger/" target="_blank">
@@ -132,7 +132,7 @@ function Contact() {
       </a>
     </li>
 
-    <div className="w-10 sm:w-32 h-1 bg-secondary"></div>
+    <div className="w-6 sm:w-32 h-1 bg-secondary"></div>
   </ul>
 </div>
 
