@@ -93,7 +93,7 @@ function Home() {
                   </li>
 
                 <li>
-                  <a href="../../public/Sebastian Schoeneberger CV Eng (FS).pdf" download="CV Sebastian Schoeneberger.pdf">
+                  <a href="/Sebastian Schoeneberger CV Eng (FS).pdf" download="CV Sebastian Schoeneberger.pdf">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
