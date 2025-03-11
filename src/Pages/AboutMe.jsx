@@ -1,4 +1,4 @@
-import img2 from "../assets/Sebastian Schoeneberger PP.jpeg";
+import img2 from "../assets/Sebastian Schoeneberger PP.webp";
 import ReactLogo from "../assets/MERN-Logo/React.png";
 import NodeLogo from "../assets/MERN-Logo/Node.js.png";
 import ExpressLogo from "../assets/MERN-Logo/Express.png";
@@ -42,7 +42,7 @@ function AboutMe() {
 
 
             <div className="flex-1 flex flex-col items-center justify-start gap-5">
-                <img src={img2} className="w-56 rounded-full border-4 border-secondary" alt="" />
+                <img src={img2} loading="lazy" className="w-56 rounded-full border-4 border-secondary" alt="" />
                 <h2 className="p-4 text-2xl sm:text-4xl font-semibold text-center">Tech Stack</h2>
                 <div className="flex gap-2 sm:gap-4">
                     <div className="flex flex-col items-center gap-3 w-20 sm:w-32">

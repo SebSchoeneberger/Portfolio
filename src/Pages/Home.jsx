@@ -1,5 +1,5 @@
 // import img from "../assets/039-230b3c6603-LTE-25750.jpeg";
-import img from "../assets/007-1959c32a88-LTE-9ece6.jpeg";
+import img from "../assets/007-1959c32a88-LTE-9ece6.webp";
 import Lottie from 'lottie-react';
 import animationData from '../assets/Animation - 1738256751522.json';
 import AboutMe from "./AboutMe";
