@@ -43,10 +43,11 @@ function Footer() {
           <div className="join pt-4 flex flex-col gap-2 md:flex-row">
             <input
               type="text"
+              disabled
               placeholder="username@site.com"
               className="input input-bordered join-item text-base-100"
             />
-            <button className="btn btn-primary join-item">Subscribe</button>
+            <button className="btn btn-primary join-item" disabled>Subscribe</button>
           </div>
         </div>
 

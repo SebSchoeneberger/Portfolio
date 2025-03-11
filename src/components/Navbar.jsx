@@ -4,6 +4,7 @@ import { useTheme } from "../context/ThemeContext";
 import kinglyInspired from "../assets/1377406_668739349805159_2133052110_n.jpg";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+import { CircleFlag } from "react-circle-flags";
 
 function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -83,7 +84,7 @@ function Navbar() {
           </label>
 
           {/* Language Selector */}
-          <div className="relative">
+          <div className="dropdown dropdown-end">
             <button onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)} className="p-2 rounded-full hover:bg-gray-200 flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,15 +102,19 @@ function Navbar() {
               </svg>
             </button>
             {languageDropdownOpen && (
-              <ul className="absolute bg-white border rounded-md mt-2 shadow-lg p-2 w-40">
-                <li onClick={() => changeLanguage("English")} className="p-2 hover:bg-gray-200 cursor-pointer">
-                  English
+              <ul className="dropdown-content flex flex-col gap-3 justify-start items-start text-black bg-white border rounded-xl mt-2 shadow-lg p-2 w-40">
+                <li 
+                  onClick={() => changeLanguage("English")} 
+                  className={`p-2 hover:bg-gray-200 cursor-pointer flex items-center gap-3 ${selectedLanguage === "English" ? "underline " : ""}`}
+                >
+                  <CircleFlag countryCode="gb" className="w-6 h-6" /> English
                 </li>
-                <li className="p-2 text-gray-400 cursor-not-allowed">
-                  German (coming soon)
+                <li className="p-2 text-gray-400 cursor-not-allowed flex items-center gap-3">
+                <CircleFlag countryCode="de" className="w-6 h-6" />                  German
                 </li>
-                <li className="p-2 text-gray-400 cursor-not-allowed">
-                  Spanish (coming soon)
+                <li className="p-2 text-gray-400 cursor-not-allowed flex items-center gap-3">
+                <CircleFlag countryCode="es" className="w-6 h-6" />  
+                  Spanish
                 </li>
               </ul>
             )}
@@ -126,23 +131,40 @@ function Navbar() {
   
           {/* Dropdown Menu for Medium Screens */}
           {dropdownOpen && (
-            <ul className="dropdown-content flex flex-col justify-start items-start text-black bg-white border rounded-md mt-2 shadow-lg p-2 w-40 md:hidden">
-              <li>
+            <ul className="dropdown-content flex flex-col gap-3 justify-start items-start text-black bg-white border rounded-xl mt-2 shadow-lg p-2 w-40 md:hidden">
+              <li className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
                 <HashLink smooth to="/#About" className="text-base hover:text-white">
                   About me
                 </HashLink>
               </li>
-              <li>
+              <li className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                </svg>
+
                 <HashLink smooth to="/#Skills" className="text-base hover:text-white">
                   Skills
                 </HashLink>
               </li>
-              <li>
+
+              <li className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+                </svg>
+
                 <HashLink smooth to="/#Projects" className="text-base hover:text-white">
                   Projects
                 </HashLink>
               </li>
-              <li>
+
+              <li className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                </svg>
+
                 <HashLink smooth to="/#Contact" className="text-base hover:text-white">
                   Contact
                 </HashLink>

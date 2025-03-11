@@ -20,7 +20,7 @@ function Home() {
             </a>
             <h3 className="text-accent text-3xl sm:text-[2.7rem]">And I am a <strong>Full-Stack Developer</strong></h3>
             <p className="text-xl sm:text-2xl flex flex-col">
-              <span>With a background in mechatronics👨🏽‍🔧 and business management📊, I combine technical expertise, problem-solving, and a multicultural🌍 perspective to create impactful web solutions.</span>
+              <span>With a background in mechatronics and business management, I combine technical expertise, problem-solving, and a multicultural perspective to create impactful web solutions.</span>
               <span className="text-secondary font-semibold pt-2"> Let’s build solutions that make an impact!</span>
             </p>
             <a href="../../public/Sebastian Schoeneberger CV Eng (FS).pdf" download="CV Sebastian Schoeneberger.pdf" className="btn btn-primary rounded-3xl">Download CV</a>
@@ -36,7 +36,7 @@ function Home() {
 
             <div>
               <ul className="flex flex-1 flex-col justify-center items-center gap-5">
-                <div className="w-1 h-20 sm:h-32 bg-secondary"></div>
+                <div className="w-1 h-10 sm:h-32 bg-secondary"></div>
                   <li>
                 <NavLink to="https://www.linkedin.com/in/sebastian-schoeneberger/" target="_blank">
                     <svg
@@ -111,7 +111,7 @@ function Home() {
                     </svg>
                   </a>
                 </li>
-                <div className="w-1 h-20 sm:h-32 bg-secondary"></div>
+                <div className="w-1 h-10 sm:h-32 bg-secondary"></div>
               </ul>
             </div>
           </div>
