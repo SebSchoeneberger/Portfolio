@@ -1,4 +1,4 @@
-import img2 from "../assets/IMG_20190322_114508.jpg";
+import img2 from "../assets/Sebastian Schoeneberger PP.jpeg";
 import ReactLogo from "../assets/MERN-Logo/React.png";
 import NodeLogo from "../assets/MERN-Logo/Node.js.png";
 import ExpressLogo from "../assets/MERN-Logo/Express.png";
