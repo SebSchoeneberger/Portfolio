@@ -1,19 +1,40 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+  }
+
+
     return ( 
         <>
             <h2 id="Contact" className="text-6xl font-bold py-6 scroll-mt-28">Contact Me</h2>
             <div className="w-16 h-2 rounded-full bg-accent"></div>
 
             <div className="flex justify-center items-center w-full py-14">
-                <form className="flex flex-col justify-center items-center gap-6 w-[720px]">
+                <form className="flex flex-col justify-center items-center gap-6 w-[720px]" onSubmit={handleSubmit}>
                     
                     {/* Name Input */}
                     <label className="w-full">
                         <span className=" text-lg font-tomorrow font-semibold">Name</span>
                         <input 
                             type="text" 
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
                             placeholder="Enter your Name" 
                             className="w-full h-16 bg-transparent border border-black rounded-xl px-4 text-lg font-tomorrow"
                         />
@@ -24,6 +45,9 @@ function Contact() {
                         <span className=" text-lg font-tomorrow font-semibold">Email</span>
                         <input 
                             type="text" 
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
                             placeholder="Enter your Email" 
                             className="w-full h-16 bg-transparent border border-black rounded-xl px-4 text-lg font-tomorrow"
                         />
@@ -33,6 +57,9 @@ function Contact() {
                     <label className="w-full">
                         <span className=" text-lg font-tomorrow font-semibold">Message</span>
                         <textarea 
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
                             placeholder="Type your Message here" 
                             className="w-full h-36 bg-transparent border border-black rounded-xl px-4 text-lg font-tomorrow"
                         />
@@ -45,12 +72,6 @@ function Contact() {
                 </form>
 
             </div>
-      {/* <div className="flex justify-center items-center gap-5 p-10 pb-14">
-        <div className="w-80 h-1 bg-black"></div>
-        <a className="text-2xl">Or</a>
-        <div className="w-80 h-1 bg-black"></div>
-      </div> */}
-
 
            <div>
   <ul className="flex justify-center items-center gap-5">
@@ -114,8 +135,8 @@ function Contact() {
     </li>
 
     <li>
-      <a href="../../public/Sebastian Schoeneberger CV Eng (FS).pdf" download="CV Sebastian Schoeneberger.pdf">
-        <svg
+      <a href="/Sebastian Schoeneberger CV Eng (FS).pdf" download="CV Sebastian Schoeneberger.pdf">
+            <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
