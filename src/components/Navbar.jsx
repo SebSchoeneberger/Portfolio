@@ -1,10 +1,10 @@
-// Navbar.jsx
 import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import kinglyInspired from "../assets/1377406_668739349805159_2133052110_n.jpg";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import { CircleFlag } from "react-circle-flags";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -24,15 +24,18 @@ function Navbar() {
 
   return (
     <nav className="flex justify-center p-10">
-      <div className="navbar flex justify-between bg-error text-base-100 shadow-md fixed max-w-[82%] border-2 rounded-2xl border-primary px-4 py-2 z-50">
-
+      <motion.div
+        className="navbar flex justify-between bg-error text-base-100 shadow-md fixed max-w-[82%] border-2 rounded-2xl border-primary px-4 py-2 z-50"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
         <HashLink smooth to="/#Home" className="flex flex-1 justify-start items-center gap-2">
           <img src={kinglyInspired} alt="" className="btn-ghost rounded-full w-16 h-16" />
           <a className="hidden sm:block btn-ghost normal-case text-xl text-primary text-left font-bold p-2 rounded-xl">
             Sebastian <br /> Schoeneberger
           </a>
         </HashLink>
-
 
         {/* Original Horizontal Menu for Large Screens */}
         <div className="hidden md:flex flex-1 justify-center items-center font-bold text-2xl">
@@ -75,17 +78,28 @@ function Navbar() {
               checked={theme === "dark"}
               onChange={toggleTheme}
             />
-            <svg className="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <svg
+              className="swap-off h-10 w-10 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
               <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
             </svg>
-            <svg className="swap-on h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <svg
+              className="swap-on h-10 w-10 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
               <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
             </svg>
           </label>
 
           {/* Language Selector */}
           <div className="dropdown dropdown-end">
-            <button onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)} className="p-2 rounded-full hover:bg-gray-200 flex items-center gap-2">
+            <button
+              onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
+              className="p-2 rounded-full hover:bg-gray-200 flex items-center gap-2"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -103,78 +117,122 @@ function Navbar() {
             </button>
             {languageDropdownOpen && (
               <ul className="dropdown-content flex flex-col gap-3 justify-start items-start text-black bg-white border rounded-xl mt-2 shadow-lg p-2 w-40">
-                <li 
-                  onClick={() => changeLanguage("English")} 
-                  className={`p-2 hover:bg-gray-200 cursor-pointer flex items-center gap-3 ${selectedLanguage === "English" ? "underline " : ""}`}
+                <li
+                  onClick={() => changeLanguage("English")}
+                  className={`p-2 hover:bg-gray-200 cursor-pointer flex items-center gap-3 ${
+                    selectedLanguage === "English" ? "underline" : ""
+                  }`}
                 >
                   <CircleFlag countryCode="gb" className="w-6 h-6" /> English
                 </li>
                 <li className="p-2 text-gray-400 cursor-not-allowed flex items-center gap-3">
-                <CircleFlag countryCode="de" className="w-6 h-6" />                  German
+                  <CircleFlag countryCode="de" className="w-6 h-6" /> German
                 </li>
                 <li className="p-2 text-gray-400 cursor-not-allowed flex items-center gap-3">
-                <CircleFlag countryCode="es" className="w-6 h-6" />  
-                  Spanish
+                  <CircleFlag countryCode="es" className="w-6 h-6" /> Spanish
                 </li>
               </ul>
             )}
           </div>
 
-           {/* Dropdown Menu Button for Medium Screens */}
-        <div className="dropdown dropdown-end">
-          <button onClick={() => setDropdownOpen(!dropdownOpen)} className="md:hidden p-2">
-            {/* Icon for dropdown menu */}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-  
-          {/* Dropdown Menu for Medium Screens */}
-          {dropdownOpen && (
-            <ul className="dropdown-content flex flex-col gap-3 justify-start items-start text-black bg-white border rounded-xl mt-2 shadow-lg p-2 w-40 md:hidden">
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          {/* Dropdown Menu Button for Medium Screens */}
+          <div className="dropdown dropdown-end">
+            <button onClick={() => setDropdownOpen(!dropdownOpen)} className="md:hidden p-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
-                <HashLink smooth to="/#About" className="text-base hover:text-white">
-                  About me
-                </HashLink>
-              </li>
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-                </svg>
+            </button>
 
-                <HashLink smooth to="/#Skills" className="text-base hover:text-white">
-                  Skills
-                </HashLink>
-              </li>
-
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-                </svg>
-
-                <HashLink smooth to="/#Projects" className="text-base hover:text-white">
-                  Projects
-                </HashLink>
-              </li>
-
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-                </svg>
-
-                <HashLink smooth to="/#Contact" className="text-base hover:text-white">
-                  Contact
-                </HashLink>
-              </li>
-            </ul>
-          )}
+            {dropdownOpen && (
+              <ul className="dropdown-content flex flex-col gap-3 justify-start items-start text-black bg-white border rounded-xl mt-2 shadow-lg p-2 w-40 md:hidden">
+                <li className="flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <HashLink smooth to="/#About" className="text-base hover:text-white">
+                    About me
+                  </HashLink>
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    />
+                  </svg>
+                  <HashLink smooth to="/#Skills" className="text-base hover:text-white">
+                    Skills
+                  </HashLink>
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+                    />
+                  </svg>
+                  <HashLink smooth to="/#Projects" className="text-base hover:text-white">
+                    Projects
+                  </HashLink>
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                    />
+                  </svg>
+                  <HashLink smooth to="/#Contact" className="text-base hover:text-white">
+                    Contact
+                  </HashLink>
+                </li>
+              </ul>
+            )}
+          </div>
         </div>
-
-        </div>
-      </div>
+      </motion.div>
     </nav>
   );
 }
