@@ -3,25 +3,39 @@ import ReactLogo from "../assets/MERN-Logo/React.png";
 import NodeLogo from "../assets/MERN-Logo/Node.js.png";
 import ExpressLogo from "../assets/MERN-Logo/Express.png";
 import MongoDBLogo from "../assets/MERN-Logo/MongoDB.png";
-import Carousel from "../components/Carousel";
 import Skills from "../components/Skills";
 import devlogo from "../assets/Experience-Logo/4897896.jpg";
 import germanAutotecLogo from "../assets/Experience-Logo/Mini Logo.jpeg";
 import chilaLogo from "../assets/Experience-Logo/WhatsApp Image 2025-02-12 at 21.26.46.jpeg";
 import inityLogo from "../assets/Experience-Logo/Inity Bar logo.jpg"
-
 import SoftSkills from "../components/SoftSkills";
+import BlurText from "../animations/BlurText";
 
 function AboutMe() {
     return ( 
         <>
-            <h1 id="About" className="text-6xl font-bold py-6 scroll-mt-28">About Me</h1>
+
+            <BlurText
+            text="About Me"
+            delay={50}
+            animateBy="words"
+            direction="top"
+            className="text-6xl font-bold py-6 scroll-mt-32"
+            id="About"
+            />
+
             <div className="w-16 h-2 rounded-full bg-accent "></div>
 
             <div className="pt-10 flex flex-col md:flex-row gap-10">
 
             <div className="flex-1 px-10 text-justify text-lg">
-                <h2 className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left">Get to know me</h2>
+            <BlurText
+                text="Get to know me"
+                delay={50}
+                animateBy="words"
+                direction="top"
+                className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left"
+            />
                 <div className="opacity-80">
                     <p>👋🏽 My name is Sebastian Schoeneberger, and I'm a junior full-stack web developer with a diverse background and a passion for technology.</p>
                     
@@ -43,7 +57,13 @@ function AboutMe() {
 
             <div className="flex-1 flex flex-col items-center justify-start gap-5">
                 <img src={img2} loading="lazy" className="w-56 rounded-full border-4 border-secondary" alt="" />
-                <h2 className="p-4 text-2xl sm:text-4xl font-semibold text-center">Tech Stack</h2>
+                <BlurText
+                text="Tech Stack"
+                delay={50}
+                animateBy="words"
+                direction="top"
+                className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left"
+            />
                 <div className="flex gap-2 sm:gap-4">
                     <div className="flex flex-col items-center gap-3 w-20 sm:w-32">
                         <img src={MongoDBLogo} className="w-full border-2 border-secondary p-4 rounded-xl bg-error" alt="" />
@@ -80,7 +100,13 @@ function AboutMe() {
             <section className="flex flex-col md:flex-row gap-10 p-4 sm:p-10">
 
                 <div className="flex-1">
-                    <h2 className="p-6 text-4xl font-semibold text-left">Education</h2>
+                <BlurText
+                text="Education"
+                delay={50}
+                animateBy="words"
+                direction="top"
+                className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left"
+            />
 
                      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                     <li>
@@ -178,7 +204,13 @@ function AboutMe() {
                 </div>
 
                 <div className="flex-1">
-                <h2 className="p-6 text-4xl font-semibold text-left">Experience</h2>
+                <BlurText
+                text="Experience"
+                delay={50}
+                animateBy="words"
+                direction="top"
+                className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left"
+            />
 
                 <div className="collapse collapse-plus shadow-2xl">
                     <input type="checkbox" name="my-accordion-3"  />
@@ -245,11 +277,23 @@ function AboutMe() {
                     </div>
                 </div>
 
-                <h2 className="p-6 text-4xl font-semibold text-left">Soft Skills</h2>
+                <BlurText
+                text="Soft Skills"
+                delay={50}
+                animateBy="words"
+                direction="top"
+                className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left"
+            />
 
                     <SoftSkills />
 
-                <h2 className="p-6 text-4xl font-semibold text-left">Languages</h2>
+                    <BlurText
+                text="Languages"
+                delay={50}
+                animateBy="words"
+                direction="top"
+                className="p-6 text-2xl sm:text-4xl font-semibold text-center sm:text-left"
+            />
 
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center justify-between gap-4 border rounded-lg shadow hover:shadow-2xl hover:scale-105 p-3">
@@ -281,11 +325,16 @@ function AboutMe() {
 
             </section>
 
-
-
-            <h2 id="Skills" className="text-6xl font-bold py-6 scroll-mt-28">Skills</h2>
+            <BlurText
+                text="Skills"
+                delay={50}
+                animateBy="words"
+                direction="top"
+                className="text-6xl font-bold py-6 scroll-mt-32"
+                id="Skills"
+                />
             <div className="w-16 h-2 rounded-full bg-accent "></div>
-            {/* <Carousel /> */}
+
             <Skills />
 
 

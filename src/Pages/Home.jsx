@@ -8,6 +8,9 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import { NavLink } from "react-router-dom";
 import ScrollProgressBar from "../components/ScrollProgressBar";
+import SplitText from "../animations/SplitText";
+import ShinyText from "../animations/ShinyText";
+import Magnet from "../animations/Magnet";
 
 function Home() {
   return (
@@ -28,26 +31,36 @@ function Home() {
           <div className="flex flex-1 flex-col justify-center items-center md:items-start h-screen text-3xl sm:text-4xl gap-5">
             <h2 className="font-bold">Greetings 👋🏽</h2>
             <a className="text-4xl sm:text-6xl text-primary">
-              I'm <strong className="text-secondary">Sebastian Schoeneberger</strong>
+              I'm{" "}
+              <strong className="text-secondary">
+                <SplitText text="Sebastian Schoeneberger" className="inline" />
+              </strong>
             </a>
+
             <h3 className="text-accent text-3xl sm:text-[2.7rem]">
-              And I am a <strong>Full-Stack Developer</strong>
+              And I am a <strong>
+                <SplitText text="Full-Stack Developer" />
+              </strong>
             </h3>
             <p className="text-xl sm:text-2xl flex flex-col">
               <span>
                 With a background in mechatronics and business management, I combine technical expertise, problem-solving, and a multicultural perspective to create impactful web solutions.
               </span>
               <span className="text-secondary font-semibold pt-2">
-                Let’s build solutions that make an impact!
+                <SplitText text="Let’s build solutions that make an impact!" />
               </span>
             </p>
-            <a
-              href="../../public/Sebastian Schoeneberger CV Eng (FS).pdf"
-              download="CV Sebastian Schoeneberger.pdf"
-              className="btn btn-primary rounded-3xl"
-            >
-              Download CV
-            </a>
+
+            <Magnet padding={50} disabled={false} magnetStrength={10} wrapperClassName="" innerClassName="">
+              <a
+                href="../../public/Sebastian Schoeneberger CV Eng (FS).pdf"
+                download="CV Sebastian Schoeneberger.pdf"
+                className="btn btn-primary rounded-3xl"
+              >
+                  <ShinyText text="Download CV" disabled={false} speed={5} />
+              </a>
+            </Magnet>
+
           </div>
 
           {/* Right Section */}

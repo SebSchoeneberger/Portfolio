@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import Magnet from "../animations/Magnet";
+import BlurText from "../animations/BlurText";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -21,7 +23,14 @@ function Contact() {
 
     return ( 
         <>
-            <h2 id="Contact" className="text-6xl font-bold py-6 scroll-mt-28">Contact Me</h2>
+          <BlurText
+            text="Contact Me"
+            delay={50}
+            animateBy="words"
+            direction="top"
+            className="text-6xl font-bold py-6 scroll-mt-32"
+            id="Contact"
+          />
             <div className="w-16 h-2 rounded-full bg-accent"></div>
 
             <div className="flex justify-center items-center w-full py-14">
@@ -66,9 +75,13 @@ function Contact() {
                     </label>
 
                     {/* Submit Button */}
-                    <button className="w-full h-16 bg-[#61DAFB] rounded-xl flex justify-center items-center hover:scale-105 duration-300">
-                        <span className=" text-lg font-tomorrow font-semibold">Send Message</span>
-                    </button>
+                    
+                    <Magnet padding={10} disabled={false} magnetStrength={10}>
+                      <button className="w-full h-16 bg-[#61DAFB] rounded-xl flex justify-center items-center hover:scale-105 duration-300">
+                        <span className="text-lg font-tomorrow font-semibold">Send Message</span>
+                      </button>
+                    </Magnet>
+
                 </form>
 
             </div>

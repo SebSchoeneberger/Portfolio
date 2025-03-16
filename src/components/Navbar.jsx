@@ -32,9 +32,9 @@ function Navbar() {
       >
         <HashLink smooth to="/#Home" className="flex flex-1 justify-start items-center gap-2">
           <img src={kinglyInspired} alt="" className="btn-ghost rounded-full w-16 h-16" />
-          <a className="hidden sm:block btn-ghost normal-case text-xl text-primary text-left font-bold p-2 rounded-xl">
+          <span className="hidden sm:block btn-ghost normal-case text-xl text-primary text-left font-bold p-2 rounded-xl">
             Sebastian <br /> Schoeneberger
-          </a>
+          </span>
         </HashLink>
 
         {/* Original Horizontal Menu for Large Screens */}

@@ -6,11 +6,20 @@ import CarCareAI from '../assets/Projects-Img/Screen Shot 2025-02-10 at 21.28.28
 import EventScheduler from '../assets/Projects-Img/Screen Shot 2025-02-10 at 21.29.57.png';
 import GermanAutotec from '../assets/Projects-Img/Untitled design (3).png';
 import { NavLink } from 'react-router-dom';
+import BlurText from '../animations/BlurText';
 
 function Projects() {
     return ( 
         <>
-            <h2 id='Projects' className="text-6xl font-bold py-6 scroll-mt-28">Projects</h2>
+            <BlurText
+            text="Projects"
+            delay={100}
+            animateBy="words"
+            direction="top"
+            className="text-6xl font-bold py-6 scroll-mt-32"
+            id="Projects"
+            />
+            
             <div className="w-16 h-2 rounded-full bg-accent mx-auto"></div>
 
             <section className='flex flex-col items-center gap-10 p-6 w-full'>
