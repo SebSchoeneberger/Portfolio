@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-    origin: "https://sebastianschoeneberger.com/",
+    origin: "https://sebastianschoeneberger.com",
     methods: "POST",
     allowedHeaders: "Content-Type"
 }));
