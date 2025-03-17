@@ -53,7 +53,7 @@ function Home() {
 
             <Magnet padding={50} disabled={false} magnetStrength={10} wrapperClassName="" innerClassName="">
               <a
-                href="../../public/Sebastian Schoeneberger CV Eng (FS).pdf"
+                href="/Sebastian Schoeneberger CV Eng (FS).pdf"
                 download="CV Sebastian Schoeneberger.pdf"
                 className="btn btn-primary rounded-3xl"
               >
