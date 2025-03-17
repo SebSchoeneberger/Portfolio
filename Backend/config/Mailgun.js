@@ -1,15 +1,16 @@
-import mailgun from 'mailgun-js';
-
-import dotenv from 'dotenv';
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+import dotenv from "dotenv";
 
 dotenv.config();
 
-const mg = mailgun();
-const client = mg.client({
-  username: 'api',
-  key: process.env.MAILGUN_API_KEY
+const mailgun = new Mailgun(FormData);
+const client = mailgun.client({
+  username: "api",
+  key: process.env.MAILGUN_API_KEY || "API_KEY",
+  url: "https://api.eu.mailgun.net/"
 });
 
-const domain = process.env.MAILGUN_DOMAIN;
+const domain = process.env.MAILGUN_DOMAIN || "sebastianschoeneberger.com";
 
 export { client, domain };

@@ -2,6 +2,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import MainLayout from "./Layouts/MainLayout";
 import Home from "./Pages/Home";
 import { ThemeProvider } from "./context/ThemeContext";
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
 const App = () => (
   <ThemeProvider>
     <RouterProvider router={router} />
+    <Toaster toastOptions={{duration: 2500}} position="bottom-center" />
   </ThemeProvider>
 );
 
