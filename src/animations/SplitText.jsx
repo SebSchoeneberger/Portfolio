@@ -10,7 +10,7 @@ const SplitText = ({
   easing = "easeOutCubic",
   threshold = 0.1,
   rootMargin = "-100px",
-  textAlign = "left",
+  textAlign = "center",
   onLetterAnimationComplete,
 }) => {
   const words = text.split(" ").map((word) => word.split(""));
@@ -57,7 +57,7 @@ const SplitText = ({
     <span
       ref={ref}
       className={`inline-block ${className}`}
-      style={{ textAlign, overflow: "hidden", wordWrap: "break-word" }}
+      style={{ textAlign, overflow: "visible", wordWrap: "break-word" }}
     >
       {words.map((word, wordIndex) => (
         <span key={wordIndex} className="inline-block">
