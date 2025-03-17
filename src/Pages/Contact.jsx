@@ -33,17 +33,21 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (!validateForm()) return;
-
+  
     setLoading(true);
     toast.loading("Sending message...", { id: "sending" });
-
+  
     try {
       const response = await sendEmail(formData);
-      console.log(response);
-      toast.success("Message sent successfully! 🎉");
-      setFormData({ name: "", email: "", message: "" });
+      
+      if (response && response.success) {
+        toast.success("Message sent successfully! 🎉");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
     } catch (error) {
       console.error(error);
       toast.error("Failed to send message. Please try again.");
@@ -52,6 +56,7 @@ function Contact() {
       toast.dismiss("sending");
     }
   };
+  
 
   return (
     <>
