@@ -40,8 +40,26 @@ function Contact() {
     toast.loading("Sending message...", { id: "sending" });
   
     try {
-      const response = await sendEmail(formData);
-      
+      if (!window.grecaptcha || !window.grecaptcha.execute) {
+        throw new Error("reCAPTCHA is not loaded");
+      }
+      const recaptchaToken = await new Promise((resolve, reject) => {
+        window.grecaptcha.ready(() => {
+          window.grecaptcha.execute('6LdNe_cqAAAAAMcyU1E4zaXp-g5SMav0l6mq-X-t', { action: 'submit_form' })
+            .then(token => {
+              if (!token) {
+                return reject(new Error("Received null token"));
+              }
+              resolve(token);
+            })
+            .catch(reject);
+        });
+      });
+    
+      const payload = { ...formData, recaptchaToken };
+    
+      const response = await sendEmail(payload);
+    
       if (response.status === "success") {
         toast.success("Message sent successfully! 🎉");
         setFormData({ name: "", email: "", message: "" });
@@ -49,7 +67,7 @@ function Contact() {
         toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
-      console.error(error);
+      console.error("Error during submission:", error);
       toast.error("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
