@@ -25,47 +25,67 @@ function Navbar() {
   return (
     <nav className="flex justify-center p-10">
       <motion.div
-        className="navbar flex justify-between bg-error text-base-100 shadow-md fixed max-w-[82%] border-2 rounded-2xl border-primary px-4 py-2 z-50"
+        className="navbar flex justify-between items-center bg-error text-base-100 shadow-md fixed max-w-[82%] w-[82%] border-2 rounded-2xl border-primary px-4 py-2 z-50"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        <HashLink smooth to="/#Home" className="flex flex-1 justify-start items-center gap-2">
-          <img src={kinglyInspired} alt="" className="btn-ghost rounded-full w-16 h-16" />
-          <span className="hidden sm:block btn-ghost normal-case text-xl text-primary text-left font-bold p-2 rounded-xl">
-            Sebastian <br /> Schoeneberger
-          </span>
-        </HashLink>
+        {/* Left Section:*/}
+        <div className="flex-none">
+          <HashLink smooth to="/#Home" className="flex items-center gap-2">
+            <img src={kinglyInspired} alt="Logo" className="btn-ghost rounded-full w-16 h-16" />
+            <span className="hidden sm:block btn-ghost normal-case text-xl text-primary text-left font-bold p-2 rounded-xl">
+              Sebastian <br /> Schoeneberger
+            </span>
+          </HashLink>
+        </div>
 
-        {/* Original Horizontal Menu for Large Screens */}
-        <div className="hidden md:flex flex-1 justify-center items-center font-bold text-2xl">
-          <ul className="menu menu-horizontal px-1">
+        {/* Center Section: */}
+        <div className="hidden md:flex flex-auto justify-center items-center font-bold flex-nowrap">
+          <ul className="menu menu-horizontal px-1 whitespace-nowrap gap-2">
             <li>
-              <HashLink smooth to="/#About" className="text-base hover:text-white">
+              <HashLink
+                smooth
+                to="/#About"
+                className="hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]"
+              >
                 About me
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="/#Skills" className="text-base hover:text-white">
+              <HashLink
+                smooth
+                to="/#Skills"
+                className="hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]"
+              >
                 Skills
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="/#Projects" className="text-base hover:text-white">
+              <HashLink
+                smooth
+                to="/#Projects"
+                className="hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]"
+              >
                 Projects
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="/#Contact" className="text-base hover:text-white">
+              <HashLink
+                smooth
+                to="/#Contact"
+                className="hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]"
+              >
                 Contact
               </HashLink>
             </li>
           </ul>
         </div>
 
-        <div className="flex-1 flex justify-end gap-4 items-center">
+        {/* Right Section */}
+        <div className="flex-none flex justify-end gap-4 items-center">
           <HashLink to="/#Contact">
-            <button className="hidden md:btn btn-primary rounded-full hover:text-white text-base">
+            <button className="hidden md:btn btn-primary rounded-full hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]">
               Contact
             </button>
           </HashLink>
@@ -149,7 +169,6 @@ function Navbar() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
             </button>
-
             {dropdownOpen && (
               <ul className="dropdown-content flex flex-col gap-3 justify-start items-start text-black bg-white border rounded-xl mt-2 shadow-lg p-2 w-40 md:hidden">
                 <li className="flex items-center gap-2">
@@ -167,7 +186,11 @@ function Navbar() {
                       d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                     />
                   </svg>
-                  <HashLink smooth to="/#About" className="text-base hover:text-white">
+                  <HashLink
+                    smooth
+                    to="/#About"
+                    className="text-[clamp(0.6rem,1.2vw,1rem)] hover:text-white"
+                  >
                     About me
                   </HashLink>
                 </li>
@@ -186,7 +209,11 @@ function Navbar() {
                       d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
                     />
                   </svg>
-                  <HashLink smooth to="/#Skills" className="text-base hover:text-white">
+                  <HashLink
+                    smooth
+                    to="/#Skills"
+                    className="text-[clamp(0.6rem,1.2vw,1rem)] hover:text-white"
+                  >
                     Skills
                   </HashLink>
                 </li>
@@ -205,7 +232,11 @@ function Navbar() {
                       d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
                     />
                   </svg>
-                  <HashLink smooth to="/#Projects" className="text-base hover:text-white">
+                  <HashLink
+                    smooth
+                    to="/#Projects"
+                    className="text-[clamp(0.6rem,1.2vw,1rem)] hover:text-white"
+                  >
                     Projects
                   </HashLink>
                 </li>
@@ -224,7 +255,11 @@ function Navbar() {
                       d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
                     />
                   </svg>
-                  <HashLink smooth to="/#Contact" className="text-base hover:text-white">
+                  <HashLink
+                    smooth
+                    to="/#Contact"
+                    className="text-[clamp(0.6rem,1.2vw,1rem)] hover:text-white"
+                  >
                     Contact
                   </HashLink>
                 </li>
