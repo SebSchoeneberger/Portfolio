@@ -12,10 +12,10 @@ const sendEmail = async (req, res) => {
 
   try {
     await client.messages.create(domain, emailData);
-    return res.status(200).json({ message: 'Message sent successfully' });
+    return res.status(200).json({ status: "success", message: 'Message sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    return res.status(500).json({ message: 'Failed to send message', error });
+    return res.status(500).json({ status: "error", message: 'Failed to send message', error });
   }
 };
 

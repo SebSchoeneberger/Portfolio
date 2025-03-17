@@ -42,7 +42,7 @@ function Contact() {
     try {
       const response = await sendEmail(formData);
       
-      if (response && response.success) {
+      if (response.status === "success") {
         toast.success("Message sent successfully! 🎉");
         setFormData({ name: "", email: "", message: "" });
       } else {
