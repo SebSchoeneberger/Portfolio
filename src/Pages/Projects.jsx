@@ -22,7 +22,7 @@ function Projects() {
             
             <div className="w-16 h-2 rounded-full bg-accent mx-auto"></div>
 
-            <section className='flex flex-col items-center gap-10 p-6 w-full'>
+            <section className='flex flex-col text-center md:text-left items-center gap-10 p-6 w-full'>
                 {/* Project 1 */}
                 <div className='flex flex-col md:flex-row items-center gap-10 border-b border-white dark:border-black max-w-[1240px] w-full md:max-h-[350px] h-auto p-4'>
                     <img src={Snaptask} alt="Snaptask Homepage" className='w-full max-w-[545px] h-auto bg-cover rounded-lg hover:scale-110 shadow-2xl' />
@@ -56,8 +56,8 @@ function Projects() {
                 {/* Project 2 */}
                 <div className='flex flex-col md:flex-row items-center gap-10 border-b border-white dark:border-black max-w-[1240px] w-full md:max-h-[350px] h-auto p-4'>
                     <img src={Edelstein} alt="Edelstein Homepage" className='w-full max-w-[545px] h-auto bg-cover rounded-lg hover:scale-110 shadow-2xl' />
-                    <div className='flex flex-col items-center md:items-start gap-2'>
-                        <h2 className='text-primary font-bold text-2xl'>Edelstein Bibliothek</h2>
+                    <div className='flex flex-col items-center md:items-start gap-3'>
+                        <h2 className='text-primary te font-bold text-2xl'>Edelstein Bibliothek</h2>
                         <h3 className='text-base font-normal pb-6'>Fullstack Website</h3>
                         <p className='text-base font-normal opacity-50'>A Website created for a gemstone seller to showcase and manage their inventory. This platform allows users to explore gemstones using advanced filters, view detailed properties, and learn more about their healing and spiritual benefits.</p>
                         <ul className='flex flex-wrap justify-center items-center gap-2'>

@@ -9,6 +9,7 @@ import PostmanLogo from '../assets/Skills-Logo/Postman.png';
 import TailwindLogo from '../assets/Skills-Logo/TailwindCSS.png';
 import VisualStudioLogo from '../assets/Skills-Logo/VisualStudio.png';
 import ViteLogo from '../assets/Skills-Logo/Vite.js.png';
+import Magnet from "../animations/Magnet"
 
 function Skills() {
 
@@ -30,18 +31,20 @@ function Skills() {
     return (
         <>
 
-            <div className="flex flex-wrap justify-center gap-4 p-5 sm:p-10 max-w-[80%] mx-auto">
-            {techImages.map((tech, index) => (
-                <div key={index} className="flex flex-col md:flex-row justify-center items-center min-w-[100px] sm:min-w-[120px] p-2 max-w-[200px] gap-1 md:gap-4 h-24 md:h-20 md:max-w-[calc(25%-1rem)] rounded-2xl border-2 border-transparent shadow-2xl hover:scale-110 md:p-10">
-                <img
-                    className="w-14 h-14 object-contain rounded-[20px] shadow-2xl"
-                    src={tech.src}
-                    alt={tech.alt}
-                />
-                <p className="text-center text-lg font-semibold md:pt-3">{tech.alt}</p>
+            <Magnet wrapperClassName="" innerClassName="" padding={50} disabled={false} magnetStrength={10}>
+                <div className="flex flex-wrap justify-center gap-4 p-5 sm:p-10 max-w-[80%] mx-auto">
+                {techImages.map((tech, index) => (
+                    <div key={index} className="flex flex-col md:flex-row justify-center items-center min-w-[100px] sm:min-w-[120px] p-2 max-w-[200px] gap-1 md:gap-4 h-24 md:h-20 md:max-w-[calc(25%-1rem)] rounded-2xl border-2 border-transparent shadow-2xl hover:scale-110 md:p-10">
+                    <img
+                        className="w-14 h-14 object-contain rounded-[20px] shadow-2xl"
+                        src={tech.src}
+                        alt={tech.alt}
+                    />
+                    <p className="text-center text-lg font-semibold md:pt-3">{tech.alt}</p>
+                    </div>
+                ))}
                 </div>
-            ))}
-            </div>
+            </Magnet>
 
 
         
