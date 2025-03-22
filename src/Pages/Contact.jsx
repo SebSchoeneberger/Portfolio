@@ -74,6 +74,13 @@ function Contact() {
       toast.dismiss("sending");
     }
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit(e);
+    }
+  };
   
 
   return (
@@ -147,6 +154,7 @@ function Contact() {
               required
               value={formData.message}
               onChange={handleChange}
+              onKeyDown={handleKeyDown}
               placeholder="Type your Message here"
               className="w-full h-36 bg-transparent border border-black rounded-xl px-4 text-lg font-tomorrow focus:outline-none focus:border-[#339933] focus:ring-[#339933] focus:ring-2 "
             />
