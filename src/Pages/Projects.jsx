@@ -25,7 +25,7 @@ function Projects() {
             <section className='flex flex-col text-center md:text-left items-center gap-10 p-6 w-full'>
                 {/* Project 1 */}
                 <div className='flex flex-col md:flex-row items-center gap-10 border-b border-white dark:border-black max-w-[1240px] w-full md:max-h-[350px] h-auto p-4'>
-                    <img src={Snaptask} alt="Snaptask Homepage" className='w-full max-w-[545px] h-auto bg-cover rounded-lg hover:scale-110 shadow-2xl' />
+                    <img src={Snaptask} alt="Snaptask Homepage" className='w-full max-w-[545px] h-auto bg-cover rounded-lg transition-transform duration-300 ease-in-out hover:scale-110 shadow-2xl' />
                     <div className='flex flex-col items-center md:items-start gap-3'>
                         <h2 className='text-primary font-bold text-2xl'>Snaptask</h2>
                         <h3 className='text-base font-normal pb-6'>Fullstack Website</h3>
@@ -55,7 +55,7 @@ function Projects() {
 
                 {/* Project 2 */}
                 <div className='flex flex-col md:flex-row items-center gap-10 border-b border-white dark:border-black max-w-[1240px] w-full md:max-h-[350px] h-auto p-4'>
-                    <img src={Edelstein} alt="Edelstein Homepage" className='w-full max-w-[545px] h-auto bg-cover rounded-lg hover:scale-110 shadow-2xl' />
+                    <img src={Edelstein} alt="Edelstein Homepage" className='w-full max-w-[545px] h-auto bg-cover rounded-lg transition-transform duration-300 ease-in-out hover:scale-110 shadow-2xl' />
                     <div className='flex flex-col items-center md:items-start gap-3'>
                         <h2 className='text-primary te font-bold text-2xl'>Edelstein Bibliothek</h2>
                         <h3 className='text-base font-normal pb-6'>Fullstack Website</h3>
@@ -86,7 +86,7 @@ function Projects() {
 
                 {/* Project 3 */}
                 <div className='flex flex-col md:flex-row items-center gap-10 border-b border-white dark:border-black max-w-[1240px] w-full md:max-h-[350px] h-auto p-4'>
-                    <img src={PokemonBattle} alt="Pokemon Battle Game Page" className='w-full max-w-[545px] h-auto bg-cover rounded-lg hover:scale-110 shadow-2xl' />
+                    <img src={PokemonBattle} alt="Pokemon Battle Game Page" className='w-full max-w-[545px] h-auto bg-cover rounded-lg transition-transform duration-300 ease-in-out hover:scale-110 shadow-2xl' />
                     <div className='flex flex-col items-center md:items-start gap-2'>
                         <h2 className='text-primary font-bold text-2xl'>Pokemon Battle Game</h2>
                         <h3 className='text-base font-normal pb-6'>Fullstack Website</h3>
@@ -114,7 +114,7 @@ function Projects() {
 
                 {/* Project 4 */}
                 <div className='flex flex-col md:flex-row items-center gap-10 border-b border-white dark:border-black max-w-[1240px] w-full md:max-h-[350px] h-auto p-4'>
-                    <img src={CarCareAI} alt="Car Care Ai Page" className='w-full max-w-[545px] h-auto bg-cover rounded-lg hover:scale-110 shadow-2xl' />
+                    <img src={CarCareAI} alt="Car Care Ai Page" className='w-full max-w-[545px] h-auto bg-cover rounded-lg transition-transform duration-300 ease-in-out hover:scale-110 shadow-2xl' />
                     <div className='flex flex-col items-center md:items-start gap-2'>
                         <h2 className='text-primary font-bold text-2xl'>Car Care Ai</h2>
                         <h3 className='text-base font-normal pb-6'>Fullstack Website</h3>
