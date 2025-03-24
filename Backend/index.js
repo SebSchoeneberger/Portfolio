@@ -11,6 +11,10 @@ app.get('/', cors(), (req, res) => {
     res.send('Hello, Sebastian!');
 });
 
+app.get("/keepalive", cors(), (req, res) => {
+    res.status(200).send("OK");
+  });
+  
 app.use("/api", cors({
     origin: "https://sebastianschoeneberger.com",
     methods: ["POST"],
