@@ -9,6 +9,17 @@ import PostmanLogo from '../assets/Skills-Logo/Postman.png';
 import TailwindLogo from '../assets/Skills-Logo/TailwindCSS.png';
 import VisualStudioLogo from '../assets/Skills-Logo/VisualStudio.png';
 import ViteLogo from '../assets/Skills-Logo/Vite.js.png';
+import AWSLogo from '../assets/Skills-Logo/AWS.png';
+import GenAI from '../assets/Skills-Logo/microchip.png';
+import JWT from '../assets/Skills-Logo/icons8-jwt-96.png';
+import Heroku from '../assets/Skills-Logo/icons8-heroku-96.png';
+import SQL from '../assets/Skills-Logo/icons8-sql-96.png';
+import Postgres from '../assets/Skills-Logo/icons8-postgresql-96.png';
+import NPM from '../assets/Skills-Logo/icons8-npm-96.png';
+import ReactLogo from "../assets/MERN-Logo/React.png";
+import NodeLogo from "../assets/MERN-Logo/Node.js.png";
+import ExpressLogo from "../assets/MERN-Logo/Express.png";
+import MongoDBLogo from "../assets/MERN-Logo/MongoDB.png";
 import Magnet from "../animations/Magnet"
 
 function Skills() {
@@ -17,11 +28,22 @@ function Skills() {
         { src: JavaScriptLogo, alt: 'JavaScript' },
         { src: CSS3Logo, alt: 'CSS3' },
         { src: HTML5Logo, alt: 'HTML5' },
-        { src: TailwindLogo, alt: 'Tailwind' },
+        { src: ReactLogo, alt: 'React'},
         { src: VisualStudioLogo, alt: 'Visual Studio Code' },
+        { src: NodeLogo, alt: 'Node.js'},
+        { src: ExpressLogo, alt: 'Express'},
+        { src: MongoDBLogo, alt: 'MongoDB'},
+        { src: TailwindLogo, alt: 'Tailwind' },
         { src: PostmanLogo, alt: 'Postman' },
+        { src: AWSLogo, alt: 'AWS'},
+        { src: GenAI, alt: 'GenAI'},
         { src: GitLogo, alt: 'Git' },
         { src: GitHubLogo, alt: 'GitHub' },
+        { src: JWT, alt: 'JWT'},
+        { src: Heroku, alt: 'Heroku'},
+        { src: SQL, alt: 'SQL'},
+        { src: Postgres, alt: 'Postgres'},
+        { src: NPM, alt: 'NPM'},
         { src: ViteLogo, alt: 'Vite' },
         { src: CanvaLogo, alt: 'Canva' },
         { src: FigmaLogo, alt: 'Figma' },
