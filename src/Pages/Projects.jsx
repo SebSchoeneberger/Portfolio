@@ -151,7 +151,7 @@ function Projects() {
             </div>
             <div className="flex md:flex-col gap-4">
               <button
-                className="rounded-full bg-accent p-2"
+                className="rounded-full bg-accent p-2 hover:scale-110 transition-transform duration-300 ease-in-out"
                 onClick={(e) => {
                   e.stopPropagation();
                   openModal(project.id);
@@ -173,7 +173,7 @@ function Projects() {
 
               <NavLink to={project.demo} target="_blank">
                 <button
-                  className="rounded-full bg-accent p-2"
+                  className="rounded-full bg-accent p-2  hover:scale-110 transition-transform duration-300 ease-in-out"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <svg
