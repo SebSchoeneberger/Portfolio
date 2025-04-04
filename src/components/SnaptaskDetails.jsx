@@ -2,15 +2,15 @@ import Folder from "./Folder";
 
 const SnapTaskDetails = () => (
 
-  <div className="py-4 px-6 flex flex-col items-center justify-center text-center">
-    <h3 className="text-xl font-black text-accent pb-2">Overview</h3>
+  <div className="py-4 px-2 text-xs sm:text-base sm:px-6 flex flex-col items-center justify-center text-center">
+    <h3 className="text-lg sm:text-xl font-black text-accent pb-2">Overview</h3>
     <p className="p-4">
     SnapTask is a versatile Full-stack SaaS platform engineered to streamline task management through innovative QR code technology. Built with the MERN stack—MongoDB, Express, React, and Node.js—along with Vite and Tailwind CSS, this project showcases my ability to develop robust, modern web applications from the ground up.
     </p>
     <p className="pb-2">
       Developed in collaboration with a team at WBS Coding School, SnapTask demonstrates a modern, real-world solution for task management.
     </p>
-    <h4 className="text-xl font-black text-accent pb-2">Key Implementations:</h4>
+    <h4 className="text-lg sm:text-xl font-black text-accent pb-2">Key Implementations:</h4>
     
     <ul className="space-y-2 text-center flex flex-col items-center pb-12">
   <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
@@ -76,7 +76,7 @@ const SnapTaskDetails = () => (
   </li>
 </ul>
 
-<h4 className="text-xl font-black text-accent pb-4">Live Demo & Codebase</h4>
+<h4 className="text-lg sm:text-xl font-black text-accent pb-4">Live Demo & Codebase</h4>
 
 <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
   <Folder

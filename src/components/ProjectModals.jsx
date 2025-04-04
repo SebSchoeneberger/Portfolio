@@ -19,7 +19,7 @@ const ProjectModals = ({ projects }) => {
             }
           }}
         >
-          <div className="modal-box p-10">
+          <div className="modal-box p-2 sm:p-10">
             {/* Carousel */}
             <div className="carousel w-full mb-4">
               {project.images.map((imgSrc, index) => {
@@ -48,7 +48,7 @@ const ProjectModals = ({ projects }) => {
 
             {/* Project details content */}
             <section className="flex flex-col items-center gap-3">
-              <h3 className="text-primary font-bold text-4xl">{project.title}</h3>
+              <h3 className="text-primary font-bold text-center text-4xl">{project.title}</h3>
               {project.id === 'snaptask' ? (
                 <SnapTaskDetails />
               ) : project.id === 'edelstein' ? (

@@ -1,15 +1,15 @@
 import Folder from "./Folder";
 
 const PokemonBattleDetails = () => (
-  <div className="py-4 px-6 flex flex-col items-center justify-center text-center">
-    <h3 className="text-xl font-black text-accent pb-2">Overview</h3>
+  <div className="py-4 px-2 text-xs sm:text-base sm:px-6 flex flex-col items-center justify-center text-center">
+    <h3 className="text-lg sm:text-xl font-black text-accent pb-2">Overview</h3>
     <p className="p-4">
       Pokemon-battle Game is an engaging full-stack MERN application built as a team project. It combines the excitement of Pokémon battles with modern web technologies, allowing players to choose Pokémon, battle opponents, and view real-time health updates.
     </p>
     <p className="pb-2">
       The project uses the Pokémon API to fetch data and a Node.js backend for score tracking and maintaining a dynamic leaderboard, offering an interactive and competitive experience.
     </p>
-    <h4 className="text-xl font-black text-accent pb-2">Key Implementations:</h4>
+    <h4 className="text-lg sm:text-xl font-black text-accent pb-2">Key Implementations:</h4>
     <ul className="space-y-2 text-center flex flex-col items-center pb-12">
       <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
         <span className="flex-shrink-0">
@@ -61,8 +61,8 @@ const PokemonBattleDetails = () => (
         </span>
       </li>
     </ul>
-    
-    <h4 className="text-xl font-black text-accent pb-4">Live Demo & Codebase</h4>
+
+    <h4 className="text-lg sm:text-xl font-black text-accent pb-4">Live Demo & Codebase</h4>
     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
       <Folder
         size={1}

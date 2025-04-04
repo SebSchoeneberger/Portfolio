@@ -1,8 +1,8 @@
 import Folder from "./Folder";
 
 const CarCareAIDetails = () => (
-  <div className="py-4 px-6 flex flex-col items-center justify-center text-center">
-    <h3 className="text-xl font-black text-accent pb-2">Overview</h3>
+  <div className="py-4 px-2 text-xs sm:text-base sm:px-6 flex flex-col items-center justify-center text-center">
+    <h3 className="text-lg sm:text-xl font-black text-accent pb-2">Overview</h3>
     <p className="p-4">
       CarCare AI is a cutting-edge platform designed to simplify car diagnostics using artificial intelligence.
       Users can describe car issues, and the AI provides quick, reliable troubleshooting advice and service reminders.
@@ -12,7 +12,7 @@ const CarCareAIDetails = () => (
       Powered by an extensive Node.js backend with OpenAI integration, CarCare AI also offers features such as car detail storage,
       service history tracking, and personalized recommendations through a daily free token system.
     </p>
-    <h4 className="text-xl font-black text-accent pb-2">Key Implementations:</h4>
+    <h4 className="text-lg sm:text-xl font-black text-accent pb-2">Key Implementations:</h4>
     <ul className="space-y-2 text-center flex flex-col items-center pb-12">
       <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
         <span className="flex-shrink-0">
@@ -55,7 +55,7 @@ const CarCareAIDetails = () => (
       </li>
     </ul>
 
-    <h4 className="text-xl font-black text-accent pb-4">Codebase</h4>
+    <h4 className="text-lg sm:text-xl font-black text-accent pb-4">Codebase</h4>
     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
       <Folder
         size={1}

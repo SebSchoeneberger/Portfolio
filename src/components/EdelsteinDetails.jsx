@@ -1,8 +1,8 @@
 import Folder from "./Folder";
 
 const EdelsteinDetails = () => (
-  <div className="py-4 px-6 flex flex-col items-center justify-center text-center">
-    <h3 className="text-xl font-black text-accent pb-2">Overview</h3>
+  <div className="py-4 px-2 text-xs sm:text-base sm:px-6 flex flex-col items-center justify-center text-center">
+    <h3 className="text-lg sm:text-xl font-black text-accent pb-2">Overview</h3>
     <p className="p-4">
       Edelstein Bibliothek is a full-stack MERN application created for a gemstone seller to showcase and manage their inventory. The platform allows users to explore a rich gemstone library using advanced filters, view detailed properties, and learn about the healing and spiritual benefits of each gemstone.
     </p>
@@ -10,7 +10,7 @@ const EdelsteinDetails = () => (
       The site features an intuitive design with reusable React components and responsive layouts, ensuring a seamless user experience. For administrators, a dedicated admin panel allows dynamic creation, updating, and deletion of gemstone entries.
     </p>
 
-    <h4 className="text-xl font-black text-accent pb-2">Key Implementations:</h4>
+    <h4 className="text-lg sm:text-xl font-black text-accent pb-2">Key Implementations:</h4>
     <ul className="space-y-2 text-center flex flex-col items-center pb-12">
       <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
         <span className="flex-shrink-0">
@@ -55,7 +55,7 @@ const EdelsteinDetails = () => (
       </li>
     </ul>
 
-    <h4 className="text-xl font-black text-accent pb-4">Live Demo & Codebase</h4>
+    <h4 className="text-lg sm:text-xl font-black text-accent pb-4">Live Demo & Codebase</h4>
 
     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
       <Folder

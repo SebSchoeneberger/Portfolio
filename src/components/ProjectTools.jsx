@@ -42,14 +42,14 @@ const ProjectTools = ({ tools }) => {
   const renderToolsByCategory = (category, toolsList) => {
     return (
       <div className="mb-4 flex flex-col items-center gap-2">
-        <h4 className="text-lg font-black text-accent pb-2">{category}</h4>
+        <h4 className="text-lg sm:text-xl font-black text-accent pb-2">{category}</h4>
         <div className="flex flex-wrap justify-center gap-4">
           {toolsList.map((tool, index) => (
             <div key={index} className="flex flex-col items-center">
               {toolLogos[tool] && (
                 <img src={toolLogos[tool]} alt={tool} className="w-12 h-12 object-contain" />
               )}
-              <span className="mt-1 text-md font-semibold">{tool}</span>
+              <span className="mt-1 text-sm sm:text-md font-semibold">{tool}</span>
             </div>
           ))}
         </div>
