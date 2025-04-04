@@ -12,6 +12,10 @@ import Edelstein3 from '../assets/Projects-Img/Screen Shot 2024-12-23 at 00.55.4
 import Edelstein4 from '../assets/Projects-Img/Screen Shot 2025-03-24 at 20.23.01.png';
 
 import PokemonBattle from '../assets/Projects-Img/Screen Shot 2025-02-10 at 21.25.07.png';
+import PokemonBattle2 from '../assets/Projects-Img/Screen Shot 2025-04-04 at 18.50.35.png';
+import PokemonBattle3 from '../assets/Projects-Img/Screen Shot 2025-04-04 at 18.51.37.png';
+import PokemonBattle4 from '../assets/Projects-Img/Screen Shot 2025-04-04 at 18.52.15.png';
+
 import CarCareAI from '../assets/Projects-Img/Screen Shot 2025-02-10 at 21.28.28.png';
 
 
@@ -23,15 +27,21 @@ const projects = [
     title: 'Snaptask',
     type: 'Fullstack Website',
     description:
-      'SnapTask is a versatile SaaS platform that uses QR code technology to streamline task management for businesses and households.',
+      'SnapTask is a full-stack SaaS application that leverages QR code technology for efficient task management. Its intuitive admin dashboard and mobile interface work together to deliver an innovative solution for managing tasks in real time.',
     images: [
       Snaptask,
       Snaptask2,
       Snaptask3,
       Snaptask4
     ],
-    tech: ['React', 'NodeJS', 'Mongo DB'],
-    demo: 'https://app-snaptask.onrender.com/',
+    tools: {
+      frontend: ['JavaScript', 'CSS3', 'HTML5', 'React', 'Tailwind CSS', 'DaisyUI'],
+      backend: ['NodeJS', 'Express', 'MongoDB', 'JWT'],
+      devTools: ['Postman', 'ESLint', 'Axios', 'NPM', 'Git', 'GitHub'],
+      cloud: ['AWS', 'OpenAI']
+    },
+     tech: ['React', 'NodeJS', 'Mongo DB', 'Express', 'OpenAI', 'AWS'],
+    demo: 'https://app-snaptask.onrender.com',
   },
   {
     id: 'edelstein',
@@ -45,8 +55,14 @@ const projects = [
       Edelstein4,
       Edelstein3
     ],
-    tech: ['React', 'NodeJS', 'Mongo DB', 'AWS'],
-    demo: 'https://edelstein-bibliothek.de/',
+    tools: {
+      frontend: ['JavaScript', 'CSS3', 'HTML5', 'React', 'Tailwind CSS', 'DaisyUI'],
+      backend: ['NodeJS', 'Express', 'MongoDB', 'JWT'],
+      devTools: ['Postman', 'ESLint', 'Axios', 'NPM', 'Git', 'GitHub'],
+      cloud: ['AWS']
+    },
+    tech: ['React', 'NodeJS', 'Mongo DB', 'Express','AWS'],
+    demo: 'https://klugelou.onrender.com',
   },
   {
     id: 'pokemon-battle',
@@ -56,17 +72,22 @@ const projects = [
       'A Pokémon battle game page where players can choose Pokémon, battle opponents, and see real-time health updates.',
     images: [
       PokemonBattle,
-      'https://via.placeholder.com/800x400?text=Pokemon+Image+2',
-      'https://via.placeholder.com/800x400?text=Pokemon+Image+3',
-      'https://via.placeholder.com/800x400?text=Pokemon+Image+4'
+      PokemonBattle2,
+      PokemonBattle3,
+      PokemonBattle4
     ],
-    tech: ['React', 'NodeJS', 'Mongo DB'],
-    demo: 'https://example.com/pokemon-battle',
+    tools: {
+      frontend: ['JavaScript', 'CSS3', 'HTML5', 'React', 'Tailwind CSS', 'DaisyUI'],
+      backend: ['NodeJS', 'Express', 'MongoDB'],
+      devTools: ['Postman', 'ESLint', 'Axios', 'NPM', 'Git', 'GitHub'],
+    },
+    tech: ['React', 'NodeJS', 'Mongo DB', 'Express'],
+    demo: 'https://pokemon-battle-game-ljy9.onrender.com',
   },
   {
     id: 'car-care-ai',
     title: 'Car Care Ai',
-    type: 'Fullstack Website',
+    type: 'Fullstack Website (Work in Progress)',
     description:
       'CarCare AI is a cutting-edge platform that uses artificial intelligence to simplify car diagnostics. Users can describe their car issues, and the AI provides quick, reliable solutions and troubleshooting advice.',
     images: [
@@ -75,7 +96,7 @@ const projects = [
       'https://via.placeholder.com/800x400?text=Car+Care+Image+3',
       'https://via.placeholder.com/800x400?text=Car+Care+Image+4'
     ],
-    tech: ['React', 'NodeJS', 'Mongo DB', 'OpenAI'],
+    tech: ['React', 'NodeJS', 'Mongo DB', 'Express', 'OpenAI'],
     demo: 'https://example.com/car-care-ai',
   },
 ];
@@ -173,7 +194,7 @@ function Projects() {
           </div>
         ))}
 
-        <button className="border-2 rounded-full p-3 flex items-center gap-2 hover:bg-secondary hover:scale-105">
+        <button disabled className="btn btn-primary rounded-3xl">
           View more
           <svg
             xmlns="http://www.w3.org/2000/svg"

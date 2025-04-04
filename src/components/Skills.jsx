@@ -20,6 +20,9 @@ import ReactLogo from "../assets/MERN-Logo/React.png";
 import NodeLogo from "../assets/MERN-Logo/Node.js.png";
 import ExpressLogo from "../assets/MERN-Logo/Express.png";
 import MongoDBLogo from "../assets/MERN-Logo/MongoDB.png";
+import DaisyUi from "../assets/Skills-Logo/daisyui-seeklogo.png";
+import EsLint from "../assets/Skills-Logo/ESLint.png"
+import Axios from "../assets/Skills-Logo/Azios.png"
 import Magnet from "../animations/Magnet"
 
 function Skills() {
@@ -40,6 +43,7 @@ function Skills() {
         { src: GitLogo, alt: 'Git' },
         { src: GitHubLogo, alt: 'GitHub' },
         { src: JWT, alt: 'JWT'},
+        { src: DaisyUi, alt: 'DaisyUI'},
         { src: Heroku, alt: 'Heroku'},
         { src: SQL, alt: 'SQL'},
         { src: Postgres, alt: 'Postgres'},
@@ -47,6 +51,8 @@ function Skills() {
         { src: ViteLogo, alt: 'Vite' },
         { src: CanvaLogo, alt: 'Canva' },
         { src: FigmaLogo, alt: 'Figma' },
+        { src: EsLint, alt: 'ESLint'},
+        {src : Axios, alt: 'Axios'},
       ];
 
 

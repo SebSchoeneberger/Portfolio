@@ -1,4 +1,9 @@
 import SwipeAnimation from "../animations/SwipeAnimation";
+import SnapTaskDetails from '../components/SnaptaskDetails'; 
+import ProjectTools from "./ProjectTools";
+import EdelsteinDetails from "./EdelsteinDetails";
+import PokemonBattleDetails from "./PokemonBattleDetails";
+import CarCareAIDetails from "./CarCareAIDetails";
 
 const ProjectModals = ({ projects }) => {
   return (
@@ -18,7 +23,6 @@ const ProjectModals = ({ projects }) => {
             {/* Carousel */}
             <div className="carousel w-full mb-4">
               {project.images.map((imgSrc, index) => {
-                // Calculate slide IDs for navigation
                 const total = project.images.length;
                 const prevSlide = index === 0 ? total - 1 : index - 1;
                 const nextSlide = index === total - 1 ? 0 : index + 1;
@@ -29,14 +33,9 @@ const ProjectModals = ({ projects }) => {
                     className="carousel-item relative w-full"
                   >
                     <img src={imgSrc} className="w-full object-contain" alt={`slide ${index + 1}`} />
-
                     <div className="absolute left-5 right-5 top-1/2 hidden md:flex -translate-y-1/2 justify-between">
-                      <a href={`#slide-${prevSlide}-${project.id}`} className="btn btn-circle">
-                        ❮
-                      </a>
-                      <a href={`#slide-${nextSlide}-${project.id}`} className="btn btn-circle">
-                        ❯
-                      </a>
+                      <a href={`#slide-${prevSlide}-${project.id}`} className="btn btn-circle">❮</a>
+                      <a href={`#slide-${nextSlide}-${project.id}`} className="btn btn-circle">❯</a>
                     </div>
                   </div>
                 );
@@ -47,9 +46,23 @@ const ProjectModals = ({ projects }) => {
               <SwipeAnimation className="w-8 h-8 mx-auto" />
             </div>
 
-            {/* Project details */}
-            <h3 className="font-bold text-lg">{project.title}</h3>
-            <p className="py-4">{project.description}</p>
+            {/* Project details content */}
+            <section className="flex flex-col items-center gap-3">
+              <h3 className="text-primary font-bold text-4xl">{project.title}</h3>
+              {project.id === 'snaptask' ? (
+                <SnapTaskDetails />
+              ) : project.id === 'edelstein' ? (
+                <EdelsteinDetails />
+              ) : project.id === 'pokemon-battle' ? (
+                <PokemonBattleDetails />
+              ) : project.id === 'car-care-ai' ? (
+                <CarCareAIDetails />
+              ) : (
+                <p className="py-4">{project.description}</p>
+              )}
+              {project.tools && <ProjectTools tools={project.tools} />}
+            </section>
+            
             <div className="modal-action">
               <form method="dialog">
                 <button className="btn">Close</button>
