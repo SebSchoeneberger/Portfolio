@@ -92,9 +92,6 @@ const projects = [
       'CarCare AI is a cutting-edge platform that uses artificial intelligence to simplify car diagnostics. Users can describe their car issues, and the AI provides quick, reliable solutions and troubleshooting advice.',
     images: [
       CarCareAI,
-      'https://via.placeholder.com/800x400?text=Car+Care+Image+2',
-      'https://via.placeholder.com/800x400?text=Car+Care+Image+3',
-      'https://via.placeholder.com/800x400?text=Car+Care+Image+4'
     ],
     tech: ['React', 'NodeJS', 'Mongo DB', 'Express', 'OpenAI'],
     demo: 'https://example.com/car-care-ai',

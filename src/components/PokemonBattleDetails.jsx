@@ -24,7 +24,7 @@ const PokemonBattleDetails = () => (
       </li>
       <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
         <span className="flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor"  strokelinecap="round" strokelinejoin="round" width={24} height={24}  strokeWidth={2}> <path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"></path> </svg> 
+          <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor"  strokeLinecap="round" strokeLinejoin="round" width={24} height={24}  strokeWidth={2}> <path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"></path> </svg> 
         </span>
         <span>
           <strong>Tailwind CSS Configuration:</strong> Leverage a utility-first framework for rapid and responsive design.
@@ -43,7 +43,7 @@ const PokemonBattleDetails = () => (
       </li>
       <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2">
         <span className="flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor"  strokelinecap="round" strokelinejoin="round" width={24} height={24}  strokeWidth={2}> <path d="M21 3v5l-11 9l-4 4l-3 -3l4 -4l9 -11z"></path> <path d="M5 13l6 6"></path> <path d="M14.32 17.32l3.68 3.68l3 -3l-3.365 -3.365"></path> <path d="M10 5.5l-2 -2.5h-5v5l3 2.5"></path> </svg> 
+          <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor"  strokeLinecap="round" strokeLinejoin="round" width={24} height={24}  strokeWidth={2}> <path d="M21 3v5l-11 9l-4 4l-3 -3l4 -4l9 -11z"></path> <path d="M5 13l6 6"></path> <path d="M14.32 17.32l3.68 3.68l3 -3l-3.365 -3.365"></path> <path d="M10 5.5l-2 -2.5h-5v5l3 2.5"></path> </svg> 
         </span>
         <span>
           <strong>Interactive Battles:</strong> Engage with the Pokémon API for immersive, real-time battles.

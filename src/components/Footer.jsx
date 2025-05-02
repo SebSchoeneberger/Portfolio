@@ -104,7 +104,7 @@ function Footer() {
               onClick={handleCVRequest}
               disabled={loadingCV}
             >
-              {loadingCV ? "Sending..." : "Request My CV"}
+              {loadingCV ? <span className="loading loading-infinity loading-2xl"></span> : "Request My CV"}
             </button>
           </div>
         </div>
