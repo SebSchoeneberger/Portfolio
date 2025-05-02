@@ -7,13 +7,13 @@ import ClickSpark from "../animations/ClickSpark";
 function MainLayout() {
   const { theme } = useTheme();
   return (
-<ClickSpark sparkColor='#339933'>
+  <ClickSpark sparkColor='#339933'>
       <div className={`min-h-screen ${theme === "light" ? "text-black" : "text-white"} bg-neutral`}>
         <Navbar />
         <Outlet />
         <Footer />
       </div>
-</ClickSpark>
+  </ClickSpark>
   );
 }
 

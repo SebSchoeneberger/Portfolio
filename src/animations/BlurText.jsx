@@ -3,7 +3,7 @@ import { useSprings, animated } from '@react-spring/web';
 
 const BlurText = ({
   text = '',
-  id, // Accept id prop
+  id,
   delay = 200,
   className = '',
   animateBy = 'words', // 'words' or 'letters'

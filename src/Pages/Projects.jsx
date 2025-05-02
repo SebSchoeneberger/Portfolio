@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import BlurText from '../animations/BlurText';
+import { useTranslation } from '../context/TranslationContext';
 
 import Snaptask from '../assets/Projects-Img/Screen Shot 2024-09-11 at 20.08.46.png';
-import Snaptask2 from '../assets/Projects-Img/dashboard-BS7KH6UP.png'
-import Snaptask3 from '../assets/Projects-Img/Screen Shot 2024-12-23 at 00.42.38.png'
-import Snaptask4 from '../assets/Projects-Img/Screen Shot 2024-12-23 at 00.43.13.png'
+import Snaptask2 from '../assets/Projects-Img/dashboard-BS7KH6UP.png';
+import Snaptask3 from '../assets/Projects-Img/Screen Shot 2024-12-23 at 00.42.38.png';
+import Snaptask4 from '../assets/Projects-Img/Screen Shot 2024-12-23 at 00.43.13.png';
 
 import Edelstein from '../assets/Projects-Img/Screen Shot 2024-11-23 at 07.41.28.png';
 import Edelstein2 from '../assets/Projects-Img/Screen Shot 2024-12-23 at 00.53.55.png';
@@ -18,7 +19,6 @@ import PokemonBattle4 from '../assets/Projects-Img/Screen Shot 2025-04-04 at 18.
 
 import CarCareAI from '../assets/Projects-Img/Screen Shot 2025-02-10 at 21.28.28.png';
 
-
 import ProjectModals from '../components/ProjectModals';
 
 const projects = [
@@ -28,19 +28,14 @@ const projects = [
     type: 'Fullstack Website',
     description:
       'SnapTask is a full-stack SaaS application that leverages QR code technology for efficient task management. Its intuitive admin dashboard and mobile interface work together to deliver an innovative solution for managing tasks in real time.',
-    images: [
-      Snaptask,
-      Snaptask2,
-      Snaptask3,
-      Snaptask4
-    ],
+    images: [Snaptask, Snaptask2, Snaptask3, Snaptask4],
     tools: {
       frontend: ['JavaScript', 'CSS3', 'HTML5', 'React', 'Tailwind CSS', 'DaisyUI'],
       backend: ['NodeJS', 'Express', 'MongoDB', 'JWT'],
       devTools: ['Postman', 'ESLint', 'Axios', 'NPM', 'Git', 'GitHub'],
-      cloud: ['AWS', 'OpenAI']
+      cloud: ['AWS', 'OpenAI'],
     },
-     tech: ['React', 'NodeJS', 'Mongo DB', 'Express', 'OpenAI', 'AWS'],
+    tech: ['React', 'NodeJS', 'Mongo DB', 'Express', 'OpenAI', 'AWS'],
     demo: 'https://app-snaptask.onrender.com',
   },
   {
@@ -49,19 +44,14 @@ const projects = [
     type: 'Fullstack Website',
     description:
       'A website created for a gemstone seller to showcase and manage their inventory. This platform allows users to explore gemstones using advanced filters, view detailed properties, and learn more about their healing and spiritual benefits.',
-    images: [
-      Edelstein,
-      Edelstein2,
-      Edelstein4,
-      Edelstein3
-    ],
+    images: [Edelstein, Edelstein2, Edelstein4, Edelstein3],
     tools: {
       frontend: ['JavaScript', 'CSS3', 'HTML5', 'React', 'Tailwind CSS', 'DaisyUI'],
       backend: ['NodeJS', 'Express', 'MongoDB', 'JWT'],
       devTools: ['Postman', 'ESLint', 'Axios', 'NPM', 'Git', 'GitHub'],
-      cloud: ['AWS']
+      cloud: ['AWS'],
     },
-    tech: ['React', 'NodeJS', 'Mongo DB', 'Express','AWS'],
+    tech: ['React', 'NodeJS', 'Mongo DB', 'Express', 'AWS'],
     demo: 'https://klugelou.onrender.com',
   },
   {
@@ -70,12 +60,7 @@ const projects = [
     type: 'Fullstack Website',
     description:
       'A Pokémon battle game page where players can choose Pokémon, battle opponents, and see real-time health updates.',
-    images: [
-      PokemonBattle,
-      PokemonBattle2,
-      PokemonBattle3,
-      PokemonBattle4
-    ],
+    images: [PokemonBattle, PokemonBattle2, PokemonBattle3, PokemonBattle4],
     tools: {
       frontend: ['JavaScript', 'CSS3', 'HTML5', 'React', 'Tailwind CSS', 'DaisyUI'],
       backend: ['NodeJS', 'Express', 'MongoDB'],
@@ -90,16 +75,15 @@ const projects = [
     type: 'Fullstack Website (Work in Progress)',
     description:
       'CarCare AI is a cutting-edge platform that uses artificial intelligence to simplify car diagnostics. Users can describe their car issues, and the AI provides quick, reliable solutions and troubleshooting advice.',
-    images: [
-      CarCareAI,
-    ],
+    images: [CarCareAI],
     tech: ['React', 'NodeJS', 'Mongo DB', 'Express', 'OpenAI'],
     demo: 'https://example.com/car-care-ai',
   },
 ];
 
-
 function Projects() {
+  const { t } = useTranslation();
+
   const openModal = (id) => {
     document.getElementById(`modal-${id}`).showModal();
   };
@@ -107,7 +91,7 @@ function Projects() {
   return (
     <>
       <BlurText
-        text="Projects"
+        text={t('projects.title')}
         delay={100}
         animateBy="words"
         direction="top"
@@ -130,10 +114,14 @@ function Projects() {
               onClick={() => openModal(project.id)}
             />
             <div className="flex flex-col items-center md:items-start gap-3">
-              <h2 className="text-primary font-bold text-2xl">{project.title}</h2>
-              <h3 className="text-base font-normal pb-6">{project.type}</h3>
+              <h2 className="text-primary font-bold text-2xl">
+                {t(`projects.${project.id}.title`)}
+              </h2>
+              <h3 className="text-base font-normal pb-6">
+                {t(`projects.${project.id}.type`)}
+              </h3>
               <p className="text-base font-normal opacity-50">
-                {project.description}
+                {t(`projects.${project.id}.description`)}
               </p>
               <ul className="flex flex-wrap justify-center items-center gap-2">
                 {project.tech.map((tech, index) => (
@@ -141,7 +129,7 @@ function Projects() {
                     key={index}
                     className="border-white dark:border-black border-2 rounded-full p-2"
                   >
-                    {tech}
+                    {t(`projects.${project.id}.tech.${index}`)}
                   </li>
                 ))}
               </ul>
@@ -170,7 +158,7 @@ function Projects() {
 
               <NavLink to={project.demo} target="_blank">
                 <button
-                  className="rounded-full bg-accent p-2  hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="rounded-full bg-accent p-2 hover:scale-110 transition-transform duration-300 ease-in-out"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <svg
@@ -192,7 +180,7 @@ function Projects() {
         ))}
 
         <button disabled className="btn btn-primary rounded-3xl">
-          View more
+          {t('projects.viewMore')}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -206,7 +194,7 @@ function Projects() {
               strokeWidth="2"
               d="M5 12h14M12 5l7 7-7 7"
             />
-          </svg>
+          </svg>  
         </button>
       </section>
 

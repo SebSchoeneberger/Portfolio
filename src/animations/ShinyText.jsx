@@ -7,7 +7,7 @@ const ShinyText = ({ text, disabled = false, speed = 2.5, className = '' }) => {
             'linear-gradient(120deg, rgba(0, 0, 0, 1) 30%, rgba(255, 255, 255, 0.9) 50%, rgba(0, 0, 0, 1) 70%)',
           backgroundSize: '250% 100%',
           WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent', // Keeps shine effect visible
+          WebkitTextFillColor: 'transparent',
           animationDuration: `${speed}s`,
         }}
       >

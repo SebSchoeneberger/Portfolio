@@ -5,22 +5,19 @@ import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import { CircleFlag } from "react-circle-flags";
 import { motion } from "framer-motion";
+import { useTranslation } from "../context/TranslationContext";
 
 function Navbar() {
   const { theme, setTheme } = useTheme();
+  const { t, language, setLanguage } = useTranslation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
 
-  const changeLanguage = (lang) => {
-    setSelectedLanguage(lang);
-    setLanguageDropdownOpen(false);
-  };
 
   return (
     <nav className="flex justify-center p-10">
@@ -49,7 +46,7 @@ function Navbar() {
                 to="/#About"
                 className="hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]"
               >
-                About me
+                {t("navbar.about")}
               </HashLink>
             </li>
             <li>
@@ -58,7 +55,7 @@ function Navbar() {
                 to="/#Skills"
                 className="hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]"
               >
-                Skills
+                {t("navbar.skills")}
               </HashLink>
             </li>
             <li>
@@ -67,7 +64,7 @@ function Navbar() {
                 to="/#Projects"
                 className="hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]"
               >
-                Projects
+              {t("navbar.projects")}
               </HashLink>
             </li>
             <li>
@@ -76,7 +73,7 @@ function Navbar() {
                 to="/#Contact"
                 className="hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]"
               >
-                Contact
+                {t("navbar.contact")}
               </HashLink>
             </li>
           </ul>
@@ -86,7 +83,7 @@ function Navbar() {
         <div className="flex-none flex justify-end gap-4 items-center">
           <HashLink to="/#Contact">
             <button className="hidden md:btn btn-primary rounded-full hover:text-white text-[clamp(0.6rem,1.2vw,1rem)]">
-              Contact
+            {t("navbar.contactButton")}
             </button>
           </HashLink>
 
@@ -114,46 +111,66 @@ function Navbar() {
             </svg>
           </label>
 
-          {/* Language Selector */}
-          <div className="dropdown dropdown-end">
-            <button
-              onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
-              className="p-2 rounded-full hover:bg-gray-200 flex items-center gap-2"
+        {/* Language Selector */}
+        <div className="relative">
+          <button
+            onClick={() => setLanguageDropdownOpen(o => !o)}
+            className="p-2 rounded-full hover:bg-gray-200 flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-10 h-10"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="size-10"
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 21a9.004 9.004 0 0 0 8.716-6.747
+                  M12 21a9.004 9.004 0 0 1-8.716-6.747
+                  M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3
+                  m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3
+                  m0 0a8.997 8.997 0 0 1 7.843 4.582
+                  M12 3a8.997 8.997 0 0 0-7.843 4.582
+                  m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918
+                  m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253
+                  m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247
+                  m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+              />
+            </svg>
+          </button>
+
+          {languageDropdownOpen && (
+            <ul className="absolute right-0 mt-2 w-40 bg-white text-black rounded-xl shadow-lg p-2">
+              <li
+                onClick={() => { setLanguage("en"); setLanguageDropdownOpen(false); }}
+                className={`flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer ${
+                  language === "en" ? "underline" : ""
+                }`}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
-                />
-              </svg>
-            </button>
-            {languageDropdownOpen && (
-              <ul className="dropdown-content flex flex-col gap-3 justify-start items-start text-black bg-white border rounded-xl mt-2 shadow-lg p-2 w-40">
-                <li
-                  onClick={() => changeLanguage("English")}
-                  className={`p-2 hover:bg-gray-200 cursor-pointer flex items-center gap-3 ${
-                    selectedLanguage === "English" ? "underline" : ""
-                  }`}
-                >
-                  <CircleFlag countryCode="gb" className="w-6 h-6" /> English
-                </li>
-                <li className="p-2 text-gray-400 cursor-not-allowed flex items-center gap-3">
-                  <CircleFlag countryCode="de" className="w-6 h-6" /> German
-                </li>
-                <li className="p-2 text-gray-400 cursor-not-allowed flex items-center gap-3">
-                  <CircleFlag countryCode="es" className="w-6 h-6" /> Spanish
-                </li>
-              </ul>
-            )}
-          </div>
+                <CircleFlag countryCode="gb" className="w-6 h-6" /> English
+              </li>
+              <li
+                onClick={() => { setLanguage("de"); setLanguageDropdownOpen(false); }}
+                className={`flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer ${
+                  language === "de" ? "underline" : ""
+                }`}
+              >
+                <CircleFlag countryCode="de" className="w-6 h-6" /> German
+              </li>
+              <li
+                onClick={() => { setLanguage("es"); setLanguageDropdownOpen(false); }}
+                className={`flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer ${
+                  language === "es" ? "underline" : ""
+                }`}
+              >
+                <CircleFlag countryCode="es" className="w-6 h-6" /> Spanish
+              </li>
+            </ul>
+          )}
+        </div>
 
           {/* Dropdown Menu Button for Medium Screens */}
           <div className="dropdown dropdown-end">
@@ -191,8 +208,8 @@ function Navbar() {
                     to="/#About"
                     className="text-[clamp(0.6rem,1.2vw,1rem)] hover:text-white"
                   >
-                    About me
-                  </HashLink>
+                {t("navbar.about")}
+                </HashLink>
                 </li>
                 <li className="flex items-center gap-2">
                   <svg
@@ -214,8 +231,8 @@ function Navbar() {
                     to="/#Skills"
                     className="text-[clamp(0.6rem,1.2vw,1rem)] hover:text-white"
                   >
-                    Skills
-                  </HashLink>
+                {t("navbar.skills")}
+                </HashLink>
                 </li>
                 <li className="flex items-center gap-2">
                   <svg
@@ -237,7 +254,7 @@ function Navbar() {
                     to="/#Projects"
                     className="text-[clamp(0.6rem,1.2vw,1rem)] hover:text-white"
                   >
-                    Projects
+                {t("navbar.projects")}
                   </HashLink>
                 </li>
                 <li className="flex items-center gap-2">
@@ -260,7 +277,7 @@ function Navbar() {
                     to="/#Contact"
                     className="text-[clamp(0.6rem,1.2vw,1rem)] hover:text-white"
                   >
-                    Contact
+                {t("navbar.contact")}
                   </HashLink>
                 </li>
               </ul>

@@ -4,25 +4,25 @@ import kinglyInspired from "../assets/1377406_668739349805159_2133052110_n.jpg";
 import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 import { requestCV } from "../API/cvService";
+import { useTranslation } from "../context/TranslationContext";
 
 function Footer() {
+  const { t } = useTranslation();
   const [cvEmail, setCvEmail] = useState("");
   const [loadingCV, setLoadingCV] = useState(false);
 
   const handleCVRequest = async () => {
-    // Email validation
     if (!cvEmail.trim() || !/^\S+@\S+\.\S+$/.test(cvEmail)) {
-      return toast.error("Please enter a valid email address.");
+      return toast.error(t("footer.toast.invalidEmail"));
     }
 
     setLoadingCV(true);
-    toast.loading("Sending your CV…", { id: "cv" });
+    toast.loading(t("footer.toast.sending"), { id: "cv" });
 
     try {
       if (!window.grecaptcha || !window.grecaptcha.execute) {
         throw new Error("reCAPTCHA is not loaded");
       }
-      // Execute reCAPTCHA
       const recaptchaToken = await new Promise((resolve, reject) => {
         window.grecaptcha.ready(() => {
           window.grecaptcha
@@ -39,20 +39,19 @@ function Footer() {
       const response = await requestCV(payload);
 
       if (response.status === "success") {
-        toast.success("Check your inbox for my CV! 🎉");
+        toast.success(t("footer.toast.success"));
         setCvEmail("");
       } else {
-        toast.error(response.message || "Something went wrong.");
+        toast.error(response.message || t("footer.toast.failure"));
       }
     } catch (error) {
       console.error("Error requesting CV:", error);
-      toast.error("Failed to send. Please try again.");
+      toast.error(t("footer.toast.failure"));
     } finally {
       setLoadingCV(false);
       toast.dismiss("cv");
     }
   };
-
 
   return (
     <>
@@ -67,26 +66,63 @@ function Footer() {
                   alt="logo picture"
                   className="btn-ghost rounded-full w-16 h-16"
                 />
-                <HashLink smooth to="/#Home" className="btn btn-ghost normal-case text-xl text-primary text-left font-bold p-2 rounded-xl">
+                <HashLink
+                  smooth
+                  to="/#Home"
+                  className="btn btn-ghost normal-case text-xl text-primary text-left font-bold p-2 rounded-xl"
+                >
                   Sebastian <br /> Schoeneberger
                 </HashLink>
               </div>
 
               <div className="flex flex-col gap-4 items-start">
-                <a className="text-accent font-bold" href="">Contact Information</a>
-                <a className="link-hover" href="mailto:sebastian.schoeneberger@gmail.com">
+                <a className="text-accent font-bold" href="">
+                  {t("footer.contactInfo.title")}
+                </a>
+                <a
+                  className="link-hover"
+                  href="mailto:sebastian.schoeneberger@gmail.com"
+                >
                   sebastian.schoeneberger@gmail.com
                 </a>
-                <a className="link-hover" href="tel:+4915155726745">+49 15155726745</a>
+                <a className="link-hover" href="tel:+4915155726745">
+                  +49 151 55726745
+                </a>
               </div>
             </div>
 
             <nav className="flex sm:flex-col gap-4">
-              <span className="text-accent font-bold">Links</span>
-              <HashLink smooth to="/#About" className="link link-hover text-secondary">About</HashLink>
-              <HashLink smooth to="/#Contact" className="link link-hover text-secondary">Contact</HashLink>
-              <HashLink smooth to="/#Skills" className="link link-hover text-secondary">Skills</HashLink>
-              <HashLink smooth to="/#Projects" className="link link-hover text-secondary">Projects</HashLink>
+              <span className="text-accent font-bold">
+                {t("footer.links.title")}
+              </span>
+              <HashLink
+                smooth
+                to="/#About"
+                className="link link-hover text-secondary"
+              >
+                {t("footer.links.about")}
+              </HashLink>
+              <HashLink
+                smooth
+                to="/#Contact"
+                className="link link-hover text-secondary"
+              >
+                {t("footer.links.contact")}
+              </HashLink>
+              <HashLink
+                smooth
+                to="/#Skills"
+                className="link link-hover text-secondary"
+              >
+                {t("footer.links.skills")}
+              </HashLink>
+              <HashLink
+                smooth
+                to="/#Projects"
+                className="link link-hover text-secondary"
+              >
+                {t("footer.links.projects")}
+              </HashLink>
             </nav>
           </div>
 
@@ -96,15 +132,19 @@ function Footer() {
               type="email"
               value={cvEmail}
               onChange={(e) => setCvEmail(e.target.value)}
-              placeholder="Your-email@gmail.com"
+              placeholder={t("footer.requestCV.placeholder")}
               className="input input-bordered text-black font-tomorrow focus:outline-none focus:border-[#339933] focus:ring-[#339933] focus:ring-2"
             />
-            <button 
-              className="btn btn-primary join-item"
+            <button
+              className="btn btn-primary  join-item"
               onClick={handleCVRequest}
               disabled={loadingCV}
             >
-              {loadingCV ? <span className="loading loading-infinity loading-2xl"></span> : "Request My CV"}
+              {loadingCV ? (
+                <span className="loading loading-infinity loading-2xl"></span>
+              ) : (
+                t("footer.requestCV.button")
+              )}
             </button>
           </div>
         </div>
@@ -115,8 +155,8 @@ function Footer() {
           {/* Footer Disclaimer */}
           <aside>
             <p>
-              Copyright © {new Date().getFullYear()} - Portfolio Website by{" "}
-              <strong>Sebastian Schoeneberger</strong>
+              {t("footer.disclaimer.prefix")} © {new Date().getFullYear()} -{" "}
+              {t("footer.disclaimer.by")} <strong>Sebastian Schoeneberger</strong>
             </p>
           </aside>
 
@@ -124,7 +164,10 @@ function Footer() {
           <nav>
             <ul className="flex justify-center items-center gap-5">
               <li>
-                <NavLink to="https://www.linkedin.com/in/sebastian-schoeneberger/" target="_blank">
+                <NavLink
+                  to="https://www.linkedin.com/in/sebastian-schoeneberger/"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
@@ -140,7 +183,10 @@ function Footer() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="https://github.com/SebSchoeneberger" target="_blank">
+                <NavLink
+                  to="https://github.com/SebSchoeneberger"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
@@ -155,9 +201,8 @@ function Footer() {
                   </svg>
                 </NavLink>
               </li>
-
-                <li>
-              <a href="mailto:sebastian.schoeneberger@gmail.com">
+              <li>
+                <a href="mailto:sebastian.schoeneberger@gmail.com">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -168,17 +213,18 @@ function Footer() {
                   >
                     <path
                       fillRule="evenodd"
-                      d="M17.834 6.166a8.25 8.25 0 1 0 0 11.668.75.75 0 0 1 1.06 1.06c-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788 3.807-3.808 9.98-3.808 13.788 0A9.722 9.722 0 0 1 21.75 12c0 .975-.296 1.887-.809 2.571-.514.685-1.28 1.179-2.191 1.179-.904 0-1.666-.487-2.18-1.164a5.25 5.25 0 1 1-.82-6.26V8.25a.75.75 0 0 1 1.5 0V12c0 .682.208 1.27.509 1.671.3.401.659.579.991.579.332 0 .69-.178.991-.579.3-.4.509-.99.509-1.671a8.222 8.222 0 0 0-2.416-5.834ZM15.75 12a3.75 3.75 0 1 0-7.5 0 3.75 3.75 0 0 0 7.5 0Z"
+                      d="M17.834 6.166a8.25 8.25 0 1 0 0 11.668.75.75 0 0 1 1.06 1.06c-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788 3.807-3.808 9.98-3.808 13.788 0A9.722 9.722 0 0 1 21.75 12c0 .975-.296 1.887-.809 2.571-.514.685-1.28 1.179-2.191 1.179-.904 0-1.666-.487-2.18-1.164a5.25 5.25 0 1 1-.82-6.26V8.25a.75.75 0 0 1 1.5 0V12c0 .682.208 1.27.509 1.671.3.401.659.579.991.579.332 0 .69-.178.991-.579.3-.4.509-.99.509-1.671a8.222 8.222 0 0 0-2.416-5.834Z"
                       clipRule="evenodd"
                     />
                   </svg>
-              </a>
-                </li>
-                
+                </a>
+              </li>
               <li>
-
-              <a href="/Sebastian Schoeneberger CV Eng (FS).pdf" download="CV Sebastian Schoeneberger.pdf">     
-                   <svg
+                <a
+                  href="/Sebastian Schoeneberger CV Eng (FS).pdf"
+                  download="CV Sebastian Schoeneberger.pdf"
+                >
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"

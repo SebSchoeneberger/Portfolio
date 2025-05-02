@@ -11,8 +11,12 @@ import ScrollProgressBar from "../components/ScrollProgressBar";
 import SplitText from "../animations/SplitText";
 import ShinyText from "../animations/ShinyText";
 import Magnet from "../animations/Magnet";
+import { useTranslation } from "../context/TranslationContext";
+
 
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <>
       <ScrollProgressBar />
@@ -28,39 +32,37 @@ function Home() {
           className="max-w-[82%] flex flex-col-reverse md:flex-row justify-center items-center text-center md:text-left gap-10 mx-auto scroll-mt-28 pb-5"
         >
           {/* Left Section */}
-          <div className="flex flex-1 flex-col justify-center items-center md:items-start h-screen text-3xl sm:text-4xl gap-5">
-            <h2 className="font-bold">Greetings 👋🏽</h2>
+          <div className="flex-1 flex flex-col justify-center items-center md:items-start h-screen text-3xl sm:text-4xl gap-5">
+            <h2 className="font-bold">{t("home.greetings")}</h2>
             <a className="text-4xl sm:text-6xl text-primary">
-              I'm{" "}
+              {t("home.intro")}{" "}
               <strong className="text-secondary">
-                <SplitText text="Sebastian Schoeneberger" className="inline" />
+                <SplitText text={t("home.name")} className="inline" />
               </strong>
             </a>
 
             <h3 className="text-accent text-3xl sm:text-[2.7rem]">
-              And I am a <strong>
-                <SplitText text="Full-Stack Developer" />
+              {t("home.jobTitlePrefix")}{" "}
+              <strong>
+                <SplitText text={t("home.jobTitle")} />
               </strong>
             </h3>
             <p className="text-xl sm:text-2xl flex flex-col">
-              <span>
-                With a background in mechatronics and business management, I combine technical expertise, problem-solving, and a multicultural perspective to create impactful web solutions.
-              </span>
+              <span>{t("home.description")}</span>
               <span className="text-secondary font-semibold pt-2">
-                <SplitText text="Let’s build solutions that make an impact!" />
+                <SplitText text={t("home.callToAction")} />
               </span>
             </p>
 
-            <Magnet padding={50} disabled={false} magnetStrength={10} wrapperClassName="" innerClassName="">
+            <Magnet padding={50} disabled={false} magnetStrength={10} wrapperClassName="">
               <a
                 href="/Sebastian Schoeneberger CV Eng (FS).pdf"
                 download="CV Sebastian Schoeneberger.pdf"
                 className="btn btn-primary rounded-3xl"
               >
-                  <ShinyText text="Download CV" disabled={false} speed={5} />
+                <ShinyText text={t("home.downloadCV")} disabled={false} speed={5} />
               </a>
             </Magnet>
-
           </div>
 
           {/* Right Section */}

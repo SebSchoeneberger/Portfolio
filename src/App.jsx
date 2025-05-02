@@ -3,6 +3,7 @@ import MainLayout from "./Layouts/MainLayout";
 import Home from "./Pages/Home";
 import { ThemeProvider } from "./context/ThemeContext";
 import { Toaster } from "react-hot-toast";
+import { TranslationProvider } from "./context/TranslationContext"; 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,10 +14,12 @@ const router = createBrowserRouter(
 );
 
 const App = () => (
-  <ThemeProvider>
-    <RouterProvider router={router} />
-    <Toaster toastOptions={{duration: 2500}} position="bottom-center" />
-  </ThemeProvider>
+  <TranslationProvider>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+      <Toaster toastOptions={{duration: 2500}} position="bottom-center" />
+    </ThemeProvider>
+  </TranslationProvider>
 );
 
 export default App;

@@ -6,13 +6,12 @@ const requestCV = async (req, res) => {
     return res.status(400).json({ status: "error", message: "Email is required" });
   }
 
-  // Immediately respond to the user
   res.status(200).json({ 
     status: "success", 
     message: "CV request received, please check your email shortly." 
   });
-
-  // Send email asynchronously
+  
+  // Send the email using Mailgun
   setImmediate(async () => {
     try {
         const emailData = {
