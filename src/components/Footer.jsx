@@ -1,8 +1,59 @@
+import { useState } from "react";
+import { toast } from "react-hot-toast";
 import kinglyInspired from "../assets/1377406_668739349805159_2133052110_n.jpg";
 import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
+import { requestCV } from "../API/cvService";
 
 function Footer() {
+  const [cvEmail, setCvEmail] = useState("");
+  const [loadingCV, setLoadingCV] = useState(false);
+
+  const handleCVRequest = async () => {
+    // Email validation
+    if (!cvEmail.trim() || !/^\S+@\S+\.\S+$/.test(cvEmail)) {
+      return toast.error("Please enter a valid email address.");
+    }
+
+    setLoadingCV(true);
+    toast.loading("Sending your CV…", { id: "cv" });
+
+    try {
+      if (!window.grecaptcha || !window.grecaptcha.execute) {
+        throw new Error("reCAPTCHA is not loaded");
+      }
+      // Execute reCAPTCHA
+      const recaptchaToken = await new Promise((resolve, reject) => {
+        window.grecaptcha.ready(() => {
+          window.grecaptcha
+            .execute("6LdNe_cqAAAAAMcyU1E4zaXp-g5SMav0l6mq-X-t", { action: "request_cv" })
+            .then((token) => {
+              if (!token) return reject(new Error("Received null token"));
+              resolve(token);
+            })
+            .catch(reject);
+        });
+      });
+
+      const payload = { email: cvEmail, recaptchaToken };
+      const response = await requestCV(payload);
+
+      if (response.status === "success") {
+        toast.success("Check your inbox for my CV! 🎉");
+        setCvEmail("");
+      } else {
+        toast.error(response.message || "Something went wrong.");
+      }
+    } catch (error) {
+      console.error("Error requesting CV:", error);
+      toast.error("Failed to send. Please try again.");
+    } finally {
+      setLoadingCV(false);
+      toast.dismiss("cv");
+    }
+  };
+
+
   return (
     <>
       <footer className="footer footer-center bg-error text-primary p-10 flex flex-col justify-center items-center">
@@ -39,15 +90,22 @@ function Footer() {
             </nav>
           </div>
 
-          {/* Subscribe Section */}
+          {/* Request CV Section */}
           <div className="join pt-4 flex flex-col gap-2 md:flex-row">
             <input
-              type="text"
-              disabled
-              placeholder="username@site.com"
-              className="input input-bordered join-item text-base-100"
+              type="email"
+              value={cvEmail}
+              onChange={(e) => setCvEmail(e.target.value)}
+              placeholder="Your-email@gmail.com"
+              className="input input-bordered text-black font-tomorrow focus:outline-none focus:border-[#339933] focus:ring-[#339933] focus:ring-2"
             />
-            <button className="btn btn-primary join-item" disabled>Subscribe</button>
+            <button 
+              className="btn btn-primary join-item"
+              onClick={handleCVRequest}
+              disabled={loadingCV}
+            >
+              {loadingCV ? "Sending..." : "Request My CV"}
+            </button>
           </div>
         </div>
 
